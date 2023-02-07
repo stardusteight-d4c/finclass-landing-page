@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-white text-white font-roboto;
+  @apply bg-black text-white font-roboto relative min-h-screen;
 }
 
 .navGlassmorphism {
@@ -13,9 +13,24 @@ body {
   border-bottom: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .textGradient {
   background: -webkit-linear-gradient(#0093dc, #00e7f9);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  background: #00e7f9;
+  border-radius: 20px;
 }

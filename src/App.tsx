@@ -5,7 +5,7 @@ interface Props {}
 
 export const App = (props: Props) => {
   return (
-    <main className='h-fit max-w-screen'>
+    <main className='h-fit z-0'>
       <Hero />
     </main>
   )
