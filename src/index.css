@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  @apply  max-w-[100vw] overflow-x-hidden
+}
+
 body {
-  @apply bg-black text-white font-roboto relative min-h-screen;
+  @apply bg-black text-white font-roboto relative;
 }
 
 .navGlassmorphism {
@@ -15,6 +19,7 @@ body {
 
 .no-scroll {
   overflow: hidden;
+  max-height: 100vh;
 }
 
 .textGradient {
