@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply bg-white text-white font-roboto;
+}
+
+.navGlassmorphism {
+  background: rgba( 0, 0, 0, 0.25 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-bottom: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.textGradient {
+  background: -webkit-linear-gradient(#0093dc, #00e7f9);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
