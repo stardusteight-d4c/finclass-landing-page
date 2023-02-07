@@ -2,6 +2,16 @@
 module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    screens: {
+      // ex.: => @media (min-width: 640px) { ... }
+      sm: '640px',
+      md: '768px',
+      mmd: '900px',
+      lg: '1024px',
+      xxl: '1130px',
+      xl: '1280px',
+      '2xl': '1536px',
+    },
     extend: {
       fontFamily: {
         roboto: 'Roboto, sans-serif',
