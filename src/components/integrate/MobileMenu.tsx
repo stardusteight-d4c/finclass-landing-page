@@ -34,20 +34,40 @@ export const MobileMenu = ({ openMenu, setOpenMenu }: Props) => {
           />
         </div>
         <div className="mt-10">
-          <span>Baixe nosso app</span>
-          <div className="grid grid-cols-2">
-            <div className="flex flex-col items-center col-span-1">
+          <div className="flex mt-8 flex-col gap-y-8 items-center">
+            <span className="pb-2 cursor-pointer w-full inline-block border-b border-[#00e7f9] text-xl font-bold text-white">
+              Assinar
+            </span>
+            <span className="pb-2 cursor-pointer w-full inline-block border-b border-[#00e7f9] text-xl font-bold text-white">
+              Entrar
+            </span>
+            <span className="pb-2 cursor-pointer w-full inline-block border-b border-[#00e7f9] text-xl font-bold text-white">
+              Blog
+            </span>
+          </div>
+          <span className="text-lg inline-block font-semibold mt-10">
+            Baixe nosso app
+          </span>
+          <div className="space-y-4 mt-4">
+            <div className="flex cursor-pointer gap-x-6 items-center">
               <img src={appStore} alt="App Store" className="w-10" />
-              <span>via App Store</span>
+              <span className="font-openSans text-[#B4B4B4]">
+                via{' '}
+                <strong className="ml-1 text-white font-roboto font-medium">
+                  App Store
+                </strong>
+              </span>
             </div>
-            <div className="flex flex-col items-center col-span-1">
+            <div className="flex cursor-pointer gap-x-6 items-center">
               <img src={googlePlay} alt="Google Play" className="w-11" />
-              <span>via Google Play</span>
+              <span className="font-openSans text-[#B4B4B4] -ml-[2.3px]">
+                via{' '}
+                <strong className="ml-1 text-white font-roboto font-medium">
+                  Google Play
+                </strong>
+              </span>
             </div>
           </div>
-          <button>Assine agora</button>
-          <button>Entrar</button>
-          <button>Blog</button>
         </div>
       </div>
     </div>,
