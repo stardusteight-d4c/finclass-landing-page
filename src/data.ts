@@ -8,7 +8,32 @@ import florianBartunek from './assets/mentors/florian-bartunek.webp'
 import brunoPerini from './assets/mentors/bruno-perini.webp'
 import fabioGiambiagi from './assets/mentors/fabio-giambiagi.webp'
 
-export const mentors = [
+import treasuryDirect from './assets/contents/treasury-direct.svg'
+import fundamentalsOfTheExchange from './assets/contents/fundamentals-of-the-exchange.svg'
+import cryptocurrencies from './assets/contents/cryptocurrencies.svg'
+import fixedIncome from './assets/contents/fixed-income.svg'
+import indicatorAnalysis from './assets/contents/indicator-analysis.svg'
+import investmentFunds from './assets/contents/investment-funds.svg'
+import publicFinances from './assets/contents/public-finances.svg'
+import diversification from './assets/contents/diversification.svg'
+import reserveOfValue from './assets/contents/reserve-of-value.svg'
+import behavioralBiases from './assets/contents/behavioral-biases.svg'
+import equity from './assets/contents/equity.svg'
+import others from './assets/contents/others.svg'
+
+interface Mentors {
+  name: string
+  img: string
+  description: string
+  videoID: string
+}
+
+interface ContentList {
+  icon: string
+  title: string
+}
+
+export const mentors: Mentors[] = [
   {
     name: `Thiago Nigro`,
     img: thiagoNigro,
@@ -65,6 +90,53 @@ export const mentors = [
   },
 ]
 
-
-                
-              
+export const contents: ContentList[] = [
+  {
+    icon: treasuryDirect,
+    title: 'Tesouro Direto',
+  },
+  {
+    icon: fundamentalsOfTheExchange,
+    title: ' Fundamentos da Bolsa',
+  },
+  {
+    icon: cryptocurrencies,
+    title: 'Criptomoedas',
+  },
+  {
+    icon: fixedIncome,
+    title: 'Renda Fixa',
+  },
+  {
+    icon: indicatorAnalysis,
+    title: 'Análise de Indicadores',
+  },
+  {
+    icon: investmentFunds,
+    title: 'Fundos de investimento',
+  },
+  {
+    icon: publicFinances,
+    title: 'Financas Públicas',
+  },
+  {
+    icon: diversification,
+    title: 'Diversificação',
+  },
+  {
+    icon: reserveOfValue,
+    title: 'Reserva de Valor',
+  },
+  {
+    icon: behavioralBiases,
+    title: 'Vieses Comportamentais',
+  },
+  {
+    icon: equity,
+    title: 'Equity',
+  },
+  {
+    icon: others,
+    title: 'Outros',
+  },
+]

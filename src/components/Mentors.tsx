@@ -57,8 +57,8 @@ export const Mentors = (props: Props) => {
             alt="graduation-hat/svg"
             className="w-fit mx-auto"
           />
-          <h2 className="text-4xl font-bold mt-2 !leading-[140%]">
-            Conheça os seus mentores
+          <h2 className="text-3xl md:text-4xl font-bold mt-3 !leading-[140%]">
+            Conheça os seus <br className='md:hidden'/> mentores
           </h2>
           <span className="font-openSans text-[#F5F5F5] mt-2 inline-block">
             Os professores da Finclass são os maiores especialistas do mercado

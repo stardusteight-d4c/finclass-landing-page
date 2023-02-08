@@ -1,3 +1,4 @@
+import { Contents } from './components/Contents'
 import { Hero } from './components/Hero'
 import { Mentors } from './components/Mentors'
 
@@ -8,6 +9,7 @@ export const App = (props: Props) => {
     <main className='max-h-screen overflow-y-scroll'>
       <Hero />
       <Mentors />
+      <Contents />
     </main>
   )
 }
