@@ -1,16 +1,5 @@
 import graduationHat from '../assets/graduation-hat.svg'
-import playCircleFill from '../assets/play-circle-fill.svg'
-import thiagoNigro from '../assets/mentors/thiago-nigro.webp'
-import guilhermeBenchimol from '../assets/mentors/guilherme-benchimol.webp'
-import howardMarks from '../assets/mentors/howard-marks.webp'
-import samirKerbage from '../assets/mentors/samir-kerbage.webp'
-import fernandoFerreira from '../assets/mentors/fernando-ferreira.webp'
-import mariliaFontes from '../assets/mentors/marilia-fontes.webp'
-import floriamBartunek from '../assets/mentors/florian-bartunek.webp'
-import brunoPerini from '../assets/mentors/bruno-perini.webp'
-import fabioGiambiagi from '../assets/mentors/fabio-giambiagi.webp'
 import { useEffect, useRef, useState } from 'react'
-import { PlayerModal } from './integrate/PlayerModal'
 import { mentors } from '../data'
 import { MentorCard } from './integrate/MentorCard'
 
@@ -60,8 +49,8 @@ export const Mentors = (props: Props) => {
   }, [slider])
 
   return (
-    <section className="max-w-[100vw] overflow-x-hidden bg-black">
-      <div className="pt-16 max-w-screen-xl w-full mx-auto px-4 md:px-4">
+    <section id='mentors' className="max-w-[100vw] overflow-hidden bg-black">
+      <div className="md:pt-16 max-w-screen-xl w-full mx-auto px-4 md:px-4">
         <div className="text-center">
           <img
             src={graduationHat}
@@ -77,12 +66,12 @@ export const Mentors = (props: Props) => {
           </span>
         </div>
         <div className="relative">
-          <div className="absolute z-10 -left-16 inset-y-0 h-full w-[150px] bg-gradient-to-r from-black via-black to-transparent" />
-          <div className="absolute z-10 -right-16 inset-y-0 h-full w-[150px] bg-gradient-to-l from-black via-black to-transparent" />
+          <div className="absolute z-10 -left-16 inset-y-0 h-full w-[100px] md:w-[150px] bg-gradient-to-r from-black via-black to-transparent" />
+          <div className="absolute z-10 -right-16 inset-y-0 h-full w-[100px] md:w-[150px] bg-gradient-to-l from-black via-black to-transparent" />
           <div
             id="slider"
             ref={slider}
-            className="scrollbar-hide my-10 mx-auto flex gap-x-1 items-center scroll-smooth overflow-x-scroll relative"
+            className="scrollbar-hide pl-0 pr-8 md:pl-2 md:pr-14 my-10 mx-auto flex gap-x-1 items-center scroll-smooth overflow-x-scroll relative"
           >
             {mentors.map((mentor) => (
               <MentorCard key={mentor.name} {...mentor} />

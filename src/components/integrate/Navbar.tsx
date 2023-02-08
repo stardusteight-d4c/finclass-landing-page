@@ -14,7 +14,6 @@ export const Navbar = (props: Props) => {
   const minWith768px = useMediaQuery({
     query: '(min-width: 768px)',
   })
-  const [currentScrollPosition, setCurrentScrollPosition] = useState<number>(0)
 
   useEffect(() => {
     if (minWith768px) {
@@ -24,18 +23,11 @@ export const Navbar = (props: Props) => {
 
   useEffect(() => {
     if (openMenu) {
-      setCurrentScrollPosition(window.pageYOffset)
-      setTimeout(() => {
-        document.body.classList.add('no-scroll')
-      }, 800)
-      setTimeout(() => {
-        headerRefElement.current!.classList.remove('navGlassmorphism')
-        window.scrollTo(0, currentScrollPosition)
-      }, 1000)
+      document.body.classList.add('no-scroll')
+      headerRefElement.current!.classList.remove('navGlassmorphism')
     } else {
       document.body.classList.remove('no-scroll')
       headerRefElement.current!.classList.add('navGlassmorphism')
-      window.scrollTo(0, currentScrollPosition)
     }
   }, [openMenu, headerRefElement])
 

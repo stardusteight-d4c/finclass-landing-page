@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-  @apply  max-w-[100vw] overflow-x-hidden
+html,
+body {
+  @apply max-w-[100vw] overflow-x-hidden scroll-smooth;
 }
 
 body {
@@ -12,8 +13,8 @@ body {
 
 .navGlassmorphism {
   background: #00000040;
-  backdrop-filter: blur( 4px );
-  -webkit-backdrop-filter: blur( 4px );
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   border-bottom: 1px solid #ffffff2e;
 }
 
@@ -35,8 +36,8 @@ body {
 
 /* For IE, Edge and Firefox */
 .scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .youtubePlayer {

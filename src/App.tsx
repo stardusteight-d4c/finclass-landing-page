@@ -5,7 +5,7 @@ interface Props {}
 
 export const App = (props: Props) => {
   return (
-    <main className="h-fit z-0">
+    <main className='max-h-screen overflow-y-scroll'>
       <Hero />
       <Mentors />
     </main>
