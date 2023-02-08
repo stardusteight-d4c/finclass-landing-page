@@ -18,37 +18,37 @@ export const Contents = (props: Props) => {
         <div className="grid md:grid-cols-2">
           <div className="text-center md:text-left col-span-1 md:w-[310px] mmd:w-[410px] xl:w-[510px]">
             <img src={classesIcon} className="w-8 h-8 mx-auto md:mx-0" />
-            <h2 className="text-3xl md:text-4xl font-bold mb-[44px] !leading-[140%] mt-3">
-              Conheça <br />
+            <h2 className="text-3xl md:text-4xl font-bold mb-[44px] !leading-[120%] mt-3">
+              <strong className="textGradient">Conheça</strong> <br />
               nossos conteúdos
             </h2>
             <ul>
-              <li className="mt-14 mb-6 md:mt-12">
+              <li className="">
                 <img src={finclasses} className="h-7 mx-auto md:mx-0" />
-                <p className="mt-[22px] font-openSans">
+                <p className="mt-[22px]">
                   Aulas com alto nível de produção sobre diversos assuntos
                   relacionados a investimentos e finanças, onde você é ensinado
                   por grandes especialistas do mercado.
                 </p>
               </li>
-              <div className="bg-gradient-to-r from-[#00E7F9] to-transparent min-h-[2px] max-h-[2px] w-full" />
-              <li className="mt-14 mb-6 md:mt-12">
+              <div className="bg-gradient-to-r mt-4 mb-8 from-[#00E7F9] to-transparent min-h-[2px] max-h-[2px] w-full" />
+              <li className="">
                 <img src={finseries} className="h-7 mx-auto md:mx-0" />
-                <p className="mt-[22px] font-openSans">
+                <p className="mt-[22px]">
                   Documentários originais que visam um entretenimento
                   relacionado ao mundo do dinheiro, trazendo grandes experts
                   mundiais.
                 </p>
               </li>
-              <div className="bg-gradient-to-r from-[#00E7F9] to-transparent min-h-[2px] max-h-[2px] w-full" />
-              <li className="mt-14 mb-6 md:mt-12">
+              <div className="bg-gradient-to-r mt-4 mb-8 from-[#00E7F9] to-transparent min-h-[2px] max-h-[2px] w-full" />
+              <li className="">
                 <img src={finbooks} className="h-7 mx-auto md:mx-0" />
-                <p className="mt-[22px] font-openSans">
+                <p className="mt-[22px]">
                   Insights sobre os melhores livros de investimentos, economia e
                   dinheiro vindos de pessoas que estudaram a fundo esses livros.
                 </p>
               </li>
-              <div className="bg-gradient-to-r from-[#00E7F9] to-transparent min-h-[2px] max-h-[2px] w-full" />
+              <div className="bg-gradient-to-r mt-4 mb-8 from-[#00E7F9] to-transparent min-h-[2px] max-h-[2px] w-full" />
             </ul>
           </div>
           <div className="h-fit my-auto">

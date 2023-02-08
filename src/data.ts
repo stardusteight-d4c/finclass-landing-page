@@ -21,6 +21,11 @@ import behavioralBiases from './assets/contents/behavioral-biases.svg'
 import equity from './assets/contents/equity.svg'
 import others from './assets/contents/others.svg'
 
+import downloadIcon from './assets/app/download.svg'
+import trialsIcon from './assets/app/trials-icon.svg'
+import materialsIcon from './assets/app/materials-icon.svg'
+import playerIcon from './assets/app/plus-player-icon.svg'
+
 interface Mentors {
   name: string
   img: string
@@ -31,6 +36,12 @@ interface Mentors {
 interface ContentList {
   icon: string
   title: string
+}
+
+interface AppList {
+  icon: string
+  title: string
+  description: string
 }
 
 export const mentors: Mentors[] = [
@@ -138,5 +149,28 @@ export const contents: ContentList[] = [
   {
     icon: others,
     title: 'Outros',
+  },
+]
+
+export const appList: AppList[] = [
+  {
+    icon: downloadIcon,
+    title: `Baixe e assista offline`,
+    description: `Baixe e assista offline os seus conteúdos preferidos e continue de onde parou.`,
+  },
+  {
+    icon: trialsIcon,
+    title: `Trilhas de conhecimento`,
+    description: `Elas te guiarão para que você não perca tempo e aproveite melhor o conhecimento disponível para você.`,
+  },
+  {
+    icon: materialsIcon,
+    title: `Materiais complementares`,
+    description: ` Tenha e-books e diversos materiais complementares exclusivos para que você melhore ainda mais o seu nível de aprendizado.`,
+  },
+  {
+    icon: playerIcon,
+    title: `+500 aulas já disponíveis`,
+    description: `Mais de 500 aulas para assistir e continuar a sua jornada com novos conteúdos todos os meses.`,
   },
 ]

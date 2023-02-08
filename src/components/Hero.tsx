@@ -16,7 +16,6 @@ export const Hero = (props: Props) => {
             src={bgWorldsBest}
             className="absolute top-4 md:top-8 z-0  right-0 lg:-right-0 w-full md:max-w-[680px] xl:max-w-[780px]"
           />
-
           <div className="w-full max-w-[400px] md:max-w-none lg:w-[50%] text-center md:text-left mt-20 md:mt-0 z-10">
             <span className="textGradient tracking-widest text-sm mx-auto md:mx-0 w-fit mb-2 flex items-center gap-x-2 uppercase font-semibold">
               Conhecimento como um ativo
@@ -26,10 +25,10 @@ export const Hero = (props: Props) => {
                 className="w-5 -mt-[2px]"
               />
             </span>
-            <h1 className="text-3xl md:text-5xl w-full lg:max-w-[510px] mb-8 !leading-[110%] tracking-wide font-bold">
+            <h1 className="text-3xl md:text-5xl w-full md:max-w-[510px] lg:max-w-[520px] mb-8 !leading-[110%] tracking-wide font-bold">
               Aprenda a investir do zero com os melhores
             </h1>
-            <p className="!leading-[23.2px] font-openSans mx-auto md:mx-0 w-full md:max-w-[510px] mb-4 font-light text-[#B4B4B4]">
+            <p className="!leading-[23.2px] mx-auto md:mx-0 w-full md:max-w-[510px] mb-4 font-light text-[#B4B4B4]">
               Conquiste sua liberdade financeira e entre para o mundo dos
               investimentos com os maiores especialistas do mercado.{' '}
             </p>
@@ -57,7 +56,7 @@ export const Hero = (props: Props) => {
           <div className="w-[50%] flex items-center relative z-10">
             <img
               src={heroImg}
-              className="w-[250px] hidden md:block absolute -top-40 lg:-top-32 md:ml-[250px] lg:ml-[100px] xxl:ml-[130px]"
+              className="w-[250px] hidden md:block absolute -top-60 lg:-top-32 md:ml-[250px] lg:ml-[100px] xxl:ml-[130px]"
             />
           </div>
         </div>

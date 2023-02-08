@@ -51,18 +51,18 @@ export const MobileMenu = ({ openMenu, setOpenMenu }: Props) => {
           <div className="space-y-4 mt-4">
             <div className="flex cursor-pointer gap-x-6 items-center">
               <img src={appStore} alt="App Store" className="w-10" />
-              <span className="font-openSans text-[#B4B4B4]">
+              <span className="text-[#B4B4B4]">
                 via{' '}
-                <strong className="ml-1 text-white font-roboto font-medium">
+                <strong className="ml-1 text-white font-medium">
                   App Store
                 </strong>
               </span>
             </div>
             <div className="flex cursor-pointer gap-x-6 items-center">
               <img src={googlePlay} alt="Google Play" className="w-11" />
-              <span className="font-openSans text-[#B4B4B4] -ml-[2.3px]">
+              <span className="text-[#B4B4B4] -ml-[2.3px]">
                 via{' '}
-                <strong className="ml-1 text-white font-roboto font-medium">
+                <strong className="ml-1 text-white font-medium">
                   Google Play
                 </strong>
               </span>

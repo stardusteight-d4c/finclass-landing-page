@@ -15,8 +15,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        roboto: 'Roboto, sans-serif',
-        openSans: 'Open Sans, sans-serif',
+        noto: 'Noto Sans Display, sans-serif',
       },
       backgroundImage: {
         hero: 'url(/bg-worlds-best.webp)',
