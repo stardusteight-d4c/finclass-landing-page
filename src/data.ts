@@ -26,6 +26,19 @@ import trialsIcon from './assets/app/trials-icon.svg'
 import materialsIcon from './assets/app/materials-icon.svg'
 import playerIcon from './assets/app/plus-player-icon.svg'
 
+import learnFromScratch from './assets/roadmap/learn-from-scratch.svg'
+import fundamentalConcepts from './assets/roadmap/fundamental-concepts.svg'
+import glossariesAndSpecialMaterials from './assets/roadmap/glossaries-and-special-materials.svg'
+import clearYourDoubts from './assets/roadmap/clear-your-doubts.svg'
+import learnStockMarketAnalysis from './assets/roadmap/learn-stock-market-analysis.svg'
+import investBetter from './assets/roadmap/invest-better.svg'
+import deepenYourKnowledge from './assets/roadmap/deepen-your-knowledge.svg'
+import bestTeachers from './assets/roadmap/best-teachers.svg'
+import furtherDeepenYourKnowledge from './assets/roadmap/further-deepen-your-knowledge.svg'
+import getProfessionalInTheMarket from './assets/roadmap/get-professional-in-the-market.svg'
+import updateYourKnowledge from './assets/roadmap/update-your-knowledge.svg'
+import monthlyContent from './assets/roadmap/monthly-content.svg'
+
 interface Mentors {
   name: string
   img: string
@@ -33,15 +46,27 @@ interface Mentors {
   videoID: string
 }
 
-interface ContentList {
+interface ContentListItem {
   icon: string
   title: string
 }
 
-interface AppList {
+interface AppListItem {
   icon: string
   title: string
   description: string
+}
+
+type RoadmapListItem = {
+  icon: string
+  title: string
+  description: string
+}
+
+interface RoadmapList {
+  beginner: RoadmapListItem[]
+  intermediary: RoadmapListItem[]
+  advanced: RoadmapListItem[]
 }
 
 export const mentors: Mentors[] = [
@@ -101,7 +126,7 @@ export const mentors: Mentors[] = [
   },
 ]
 
-export const contents: ContentList[] = [
+export const contents: ContentListItem[] = [
   {
     icon: treasuryDirect,
     title: 'Tesouro Direto',
@@ -152,7 +177,7 @@ export const contents: ContentList[] = [
   },
 ]
 
-export const appList: AppList[] = [
+export const appList: AppListItem[] = [
   {
     icon: downloadIcon,
     title: `Baixe e assista offline`,
@@ -174,3 +199,84 @@ export const appList: AppList[] = [
     description: `Mais de 500 aulas para assistir e continuar a sua jornada com novos conteúdos todos os meses.`,
   },
 ]
+
+export const roadmapList: RoadmapList = {
+  beginner: [
+    {
+      icon: learnFromScratch,
+      title: 'Aprenda a investir do zero',
+      description: `Tenha conteúdos introdutórios para você começar a investir do jeito certo.`,
+    },
+    {
+      icon: fundamentalConcepts,
+      title: 'Conceitos fundamentais',
+      description: `Entenda os principais conceitos do mercado financeiro com uma
+      curadoria de qualidade para que você não aprenda conceitos
+      errados.`,
+    },
+    {
+      icon: glossariesAndSpecialMaterials,
+      title: 'Glossários e materiais especiais',
+      description: `Tenha auxílio de materiais complementares especiais para que
+      você consiga aprender de verdade como funciona o mercado.`,
+    },
+    {
+      icon: clearYourDoubts,
+      title: 'Tire suas dúvidas',
+      description: `Tenha um suporte para tirar todas as suas dúvidas relacionadas ao conteúdo
+      da plataforma.`,
+    },
+  ],
+  intermediary: [
+    {
+      icon: learnStockMarketAnalysis,
+      title: 'Aprenda análise de bolsa',
+      description: `Aprenda as diversas estratégias para você escolher as melhores ações e
+      investimentos do mercado.`,
+    },
+    {
+      icon: investBetter,
+      title: 'Invista melhor',
+      description: `Melhore a sua estratégia de investimento e consiga melhores retornos ao
+      longo do tempo.`,
+    },
+    {
+      icon: deepenYourKnowledge,
+      title: 'Aprofunde seus conhecimentos',
+      description: `Aprenda conceitos novos e técnicos sobre o mercado financeiro e melhore
+      ainda mais a sua tomada de decisão.`,
+    },
+    {
+      icon: bestTeachers,
+      title: 'Melhores professores',
+      description: `Faça tudo isso tendo acesso aos melhores profissionais do mercado e a
+      professores que realmente entendem e vivem do mercado financeiro.`,
+    },
+  ],
+  advanced: [
+    {
+      icon: furtherDeepenYourKnowledge,
+      title: 'Aprofunde seu conhecimento',
+      description: `Aprenda conceitos novos e técnicos sobre o mercado financeiro e melhore
+      ainda mais a sua tomada de decisão.`,
+    },
+    {
+      icon: getProfessionalInTheMarket,
+      title: 'Profissionalize-se no mercado',
+      description: `Adquira o conhecimento que os melhores profissionais do mercado financeiro
+      têm.`,
+    },
+    {
+      icon: updateYourKnowledge,
+      title: 'Atualize seus conhecimentos',
+      description: `Atualize-se com os conceitos mais importantes do mercado e sempre fique por
+      dentro das novas tendências e estratégias do mercado.`,
+    },
+    {
+      icon: monthlyContent,
+      title: 'Conteúdo Mensal',
+      description: `Tenha sempre um conteúdo novo para assistir e continue sempre se atualizando
+      das novidades do mercado.`,
+    },
+  ],
+}
