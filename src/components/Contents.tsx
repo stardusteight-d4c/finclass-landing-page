@@ -31,7 +31,7 @@ export const Contents = (props: Props) => {
                   por grandes especialistas do mercado.
                 </p>
               </li>
-              <div className="bg-gradient-to-r mt-4 mb-8 from-[#00E7F9] to-transparent min-h-[2px] max-h-[2px] w-full" />
+              <hr className="bg-gradient-to-r border-0 mt-4 mb-8 from-[#00E7F9] to-transparent min-h-[2px] max-h-[2px] w-full" />
               <li className="">
                 <img src={finseries} className="h-7 mx-auto md:mx-0" />
                 <p className="mt-[22px]">
@@ -40,7 +40,7 @@ export const Contents = (props: Props) => {
                   mundiais.
                 </p>
               </li>
-              <div className="bg-gradient-to-r mt-4 mb-8 from-[#00E7F9] to-transparent min-h-[2px] max-h-[2px] w-full" />
+              <hr className="bg-gradient-to-r border-0 mt-4 mb-8 from-[#00E7F9] to-transparent min-h-[2px] max-h-[2px] w-full" />
               <li className="">
                 <img src={finbooks} className="h-7 mx-auto md:mx-0" />
                 <p className="mt-[22px]">
@@ -48,7 +48,7 @@ export const Contents = (props: Props) => {
                   dinheiro vindos de pessoas que estudaram a fundo esses livros.
                 </p>
               </li>
-              <div className="bg-gradient-to-r mt-4 mb-8 from-[#00E7F9] to-transparent min-h-[2px] max-h-[2px] w-full" />
+              <hr className="bg-gradient-to-r border-0 mt-4 mb-8 from-[#00E7F9] to-transparent min-h-[2px] max-h-[2px] w-full" />
             </ul>
           </div>
           <div className="h-fit my-auto">

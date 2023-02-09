@@ -1,5 +1,5 @@
 import appIcon from '../assets/app/app-icon.svg'
-import appMobileShowcase from '../assets/app/app-mobile-showcase.webp'
+import finclassCommunity from '../assets/app/finclass-community.png'
 import googlePlayDownload from '../assets/google-play-download.png'
 import appStoreDownload from '../assets/app-store-download.png'
 import { appList } from '../data'
@@ -7,7 +7,7 @@ import { AppListItem } from './integrate/AppListItem'
 
 interface Props {}
 
-export const MobileApp = (props: Props) => {
+export const AppMobile = (props: Props) => {
   return (
     <section className="max-w-[100vw] overflow-hidden bg-black">
       <div className="pt-16 md:pt-28 pb-11 max-w-screen-xl w-full mx-auto px-4">
@@ -20,7 +20,6 @@ export const MobileApp = (props: Props) => {
             <p className="inline-block mt-2 w-[70%] font-light text-[18px]">
               Aprenda com os melhores do mundo, onde e quando você quiser.
             </p>
-            <img src={appMobileShowcase} className="h-[410px] mx-auto md:mx-0 md:h-[487px] mt-10 mb-10 md:mb-0" />
           </div>
           <div className='h-fit mx-auto md:mx-0 w-full max-w-[400px] md:max-w-none md:my-auto'>
             <ul>

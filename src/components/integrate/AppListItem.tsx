@@ -16,7 +16,7 @@ export const AppListItem = ({ icon, title, description }: Props) => {
           <p className="md:w-[90%] font-light">{description}</p>
         </div>
       </li>
-      <div className="bg-gradient-to-r my-8 md:my-4 from-[#00E7F9] to-transparent min-h-[2px] max-h-[2px] w-full" />
+      <hr className="bg-gradient-to-r border-0 inline-block my-8 md:my-4 from-[#00E7F9] to-transparent min-h-[2px] max-h-[2px] w-full" />
     </>
   )
 }

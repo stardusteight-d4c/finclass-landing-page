@@ -2,7 +2,8 @@ import { Contents } from './components/Contents'
 import { Finseries } from './components/Finseries'
 import { Hero } from './components/Hero'
 import { Mentors } from './components/Mentors'
-import { MobileApp } from './components/MobileApp'
+import { AppMobile } from './components/AppMobile'
+import { Roadmap } from './components/Roadmap'
 
 interface Props {}
 
@@ -13,7 +14,8 @@ export const App = (props: Props) => {
       <Mentors />
       <Contents />
       <Finseries />
-      <MobileApp />
+      <AppMobile />
+      <Roadmap />
     </main>
   )
 }
