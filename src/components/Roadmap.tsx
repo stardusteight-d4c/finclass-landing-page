@@ -3,9 +3,7 @@ import accountPlaceholder from '../assets/account-placeholder.svg'
 import alignLeft from '../assets/roadmap/align-left.svg'
 import alignCenter from '../assets/roadmap/align-center.svg'
 import alignRight from '../assets/roadmap/align-right.svg'
-import learnFromScratch from '../assets/roadmap/learn-from-scratch.svg'
-import fundamentalConcepts from '../assets/roadmap/fundamental-concepts.svg'
-import glossariesAndSpecialMaterials from '../assets/roadmap/glossaries-and-special-materials.svg'
+import circle from '../assets/roadmap/circle.svg'
 import { roadmapList } from '../data'
 import { RoadmapListItem } from './integrate/RoadmapListItem'
 import { useState } from 'react'
@@ -18,10 +16,10 @@ interface Props {}
 // + Alterar o estado e renderizar os elementos dinâmicamente de acordo com o estado
 // + traçar as linhas no desktop
 
+type Routes = 'beginner' | 'intermediary' | 'advanced'
+
 export const Roadmap = (props: Props) => {
-  const [activeRoute, setActiveRoute] = useState<
-    'beginner' | 'intermediary' | 'advanced'
-  >('beginner')
+  const [activeRoute, setActiveRoute] = useState<Routes>('beginner')
 
   return (
     <section className="max-w-[100vw] overflow-hidden bg-black">
@@ -41,40 +39,53 @@ export const Roadmap = (props: Props) => {
           </span>
         </div>
         <div className="w-full relative">
-          <div className="relative mx-auto h-fit w-fit">
+          <div className="relative mt-14 mx-auto w-10 h-10">
             <img
               src={accountPlaceholder}
               alt="account-placeholder/svg"
-              className="w-10 h-10 mx-auto mt-14"
+              className="w-10 h-10 mx-auto z-20 absolute top-0 rounded-full bg-black"
             />
           </div>
 
-          <div className="absolute z-0 grid border grid-cols-2 w-[75%] inset-0 mx-auto top-5 -left-3 h-[99px]">
-            <div className="col-span-1 border-[2px] borderborder-[#949494]/80 w-full h-[96px]" />
-            <div className="col-span-1 border-[2px] border-t-transparent border-x-transparent w-full h-[96px]" />
-            <div className="col-span-1 border-[2px] w-full h-[96px]" />
-            <div className="col-span-1 border-[2px] w-full h-[96px]" />
+          <div className="absolute z-0 grid grid-cols-2 w-[77%] inset-0 mx-auto top-5 left-0 h-[99px]">
+            <div className={style.ghostContainerTopLeft(activeRoute)} />
+            <div className={style.ghostContainerTopRight(activeRoute)} />
+            <div className={style.ghostContainerLeftBottom(activeRoute)} />
+            <div className={style.ghostContainerRightBottom(activeRoute)} />
+            <div className={style.ghostContainerConnect()} />
           </div>
 
           <div className="relative h-[75px] mt-10">
             <div className="flex absolute w-full z-10 items-center gap-x-4 justify-between">
               <button
                 onClick={() => setActiveRoute('beginner')}
-                className="border flex items-center justify-center gap-x-2 border-transparent rounded-md font-bold w-full max-w-[290px] py-6 bg-[#0F1116]"
+                className={`${
+                  activeRoute === 'beginner'
+                    ? 'border-[#00E7F9]'
+                    : 'border-[#949494]/20'
+                } border flex items-center justify-center gap-x-2 rounded-md font-bold w-full max-w-[290px] py-6 bg-[#0F1116]`}
               >
                 <img src={alignLeft} alt="" />
                 Iniciante
               </button>
               <button
                 onClick={() => setActiveRoute('intermediary')}
-                className="border flex items-center justify-center gap-x-2 border-transparent rounded-md font-bold w-full max-w-[290px] py-6 bg-[#0F1116]"
+                className={`${
+                  activeRoute === 'intermediary'
+                    ? 'border-[#00E7F9]'
+                    : 'border-[#949494]/20'
+                } border flex items-center justify-center gap-x-2 rounded-md font-bold w-full max-w-[290px] py-6 bg-[#0F1116]`}
               >
                 <img src={alignCenter} alt="" />
                 Intermediário
               </button>
               <button
                 onClick={() => setActiveRoute('advanced')}
-                className="border flex items-center justify-center gap-x-2 border-transparent rounded-md font-bold w-full max-w-[290px] py-6 bg-[#0F1116]"
+                className={`${
+                  activeRoute === 'advanced'
+                    ? 'border-[#00E7F9]'
+                    : 'border-[#949494]/20'
+                } border flex items-center justify-center gap-x-2 rounded-md font-bold w-full max-w-[290px] py-6 bg-[#0F1116]`}
               >
                 <img src={alignRight} alt="" />
                 Avançado
@@ -82,7 +93,60 @@ export const Roadmap = (props: Props) => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 mt-36">
+          <div className="relative grid grid-cols-2 mt-36">
+            <div className="absolute z-0 top-16 left-1/2 -translate-x-1/2 h-[77%] !w-0 border-l border-l-[#00E7F9]" />
+            <div className="absolute top-[51px] left-1/2 -translate-x-1/2 z-10">
+              <div className="borderGradient absolute top-5 -translate-x-full left-5 h-0 border-t w-[225px]" />
+              <img
+                src={circle}
+                alt="trial-point/svg"
+                className="animate-pings"
+              />
+              <img
+                src={circle}
+                alt="trial-point/svg"
+                className="absolute top-0"
+              />
+            </div>
+            <div className="absolute top-[200px] left-1/2 -translate-x-1/2 z-10">
+              <div className="borderGradient absolute top-5 left-5 h-0 border-t w-[225px]" />
+              <img
+                src={circle}
+                alt="trial-point/svg"
+                className="animate-pings"
+              />
+              <img
+                src={circle}
+                alt="trial-point/svg"
+                className="absolute top-0"
+              />
+            </div>
+            <div className="absolute top-[351px] left-1/2 -translate-x-1/2 z-10">
+              <div className="borderGradient absolute top-5 -translate-x-full left-5 h-0 border-t w-[225px]" />
+              <img
+                src={circle}
+                alt="trial-point/svg"
+                className="animate-pings"
+              />
+              <img
+                src={circle}
+                alt="trial-point/svg"
+                className="absolute top-0"
+              />
+            </div>
+            <div className="absolute top-[84.3%] left-1/2 -translate-x-1/2 z-10">
+              <div className="borderGradient absolute top-5 left-5 h-0 border-t w-[225px]" />
+              <img
+                src={circle}
+                alt="trial-point/svg"
+                className="animate-pings"
+              />
+              <img
+                src={circle}
+                alt="trial-point/svg"
+                className="absolute top-0"
+              />
+            </div>
             {roadmapList[activeRoute].map((item, index) => (
               <RoadmapListItem data={item} index={index} key={item.icon} />
             ))}
@@ -91,4 +155,47 @@ export const Roadmap = (props: Props) => {
       </div>
     </section>
   )
+}
+
+const style = {
+  ghostContainerTopLeft: (activeRoute: Routes) => {
+    const defaultStyle = 'col-span-1 w-full h-[96px]'
+    if (activeRoute === 'beginner') {
+      return `border-t border-l border-t-[#00E7F9] border-l-[#00E7F9] ${defaultStyle}`
+    } else {
+      return `border-t border-l border-t-[#949494]/20 border-l-[#949494]/20 ${defaultStyle}`
+    }
+  },
+  ghostContainerTopRight: (activeRoute: Routes) => {
+    const defaultStyle = 'col-span-1 w-full h-[96px]'
+    if (activeRoute === 'intermediary') {
+      return `border-l border-t border-r border-l-[#00E7F9] border-t-[#949494]/20 border-r-[#949494]/20 ${defaultStyle}`
+    } else if (activeRoute === 'advanced') {
+      return `border-l border-t border-r border-l-[#949494]/20 border-t-[#00E7F9] border-r-[#00E7F9] ${defaultStyle}`
+    } else {
+      return `border-l border-t border-r border-[#949494]/20`
+    }
+  },
+  ghostContainerLeftBottom: (activeRoute: Routes) => {
+    const defaultStyle = 'col-span-1 w-full h-[96px]'
+    if (activeRoute === 'beginner') {
+      return `border-l border-b border-l-[#00E7F9] border-b-[#00E7F9] ${defaultStyle}`
+    } else {
+      return `border-l border-b border-l- border-[#949494]/20 border-b- border-[#949494]/20  ${defaultStyle}`
+    }
+  },
+  ghostContainerRightBottom: (activeRoute: Routes) => {
+    const defaultStyle = 'col-span-1 w-full h-[96px]'
+    if (activeRoute === 'advanced') {
+      return `border-l border-b border-r border-r-[#00E7F9] border-b-[#00E7F9] border-l-[#949494]/20 ${defaultStyle}`
+    } else if (activeRoute === 'intermediary') {
+      return `border-l border-b border-r border-r-[#949494]/20 border-b-[#949494]/20 border-l-[#00E7F9] ${defaultStyle}`
+    } else {
+      return `border-l border-b border-r border-r-[#949494]/20 border-b-[#949494]/20 border-l-[#949494]/20 ${defaultStyle}`
+    }
+  },
+  ghostContainerConnect: () => {
+    const defaultStyle = 'col-span-1 col-start-2 w-full h-[150px]'
+    return `border-l border-l-[#00E7F9] ${defaultStyle}`
+  },
 }

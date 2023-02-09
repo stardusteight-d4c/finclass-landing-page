@@ -23,7 +23,7 @@ export const Contents = (props: Props) => {
               nossos conteúdos
             </h2>
             <ul>
-              <li className="">
+              <li>
                 <img src={finclasses} className="h-7 mx-auto md:mx-0" />
                 <p className="mt-[22px]">
                   Aulas com alto nível de produção sobre diversos assuntos
@@ -31,8 +31,9 @@ export const Contents = (props: Props) => {
                   por grandes especialistas do mercado.
                 </p>
               </li>
-              <hr className="bg-gradient-to-r border-0 mt-4 mb-8 from-[#00E7F9] to-transparent min-h-[2px] max-h-[2px] w-full" />
-              <li className="">
+              <div className="borderGradient inline-block my-8 md:my-4 border-t border-t-[#00E7F9] h-0 w-full" />
+
+              <li>
                 <img src={finseries} className="h-7 mx-auto md:mx-0" />
                 <p className="mt-[22px]">
                   Documentários originais que visam um entretenimento
@@ -40,15 +41,16 @@ export const Contents = (props: Props) => {
                   mundiais.
                 </p>
               </li>
-              <hr className="bg-gradient-to-r border-0 mt-4 mb-8 from-[#00E7F9] to-transparent min-h-[2px] max-h-[2px] w-full" />
-              <li className="">
+              <div className="borderGradient inline-block my-8 md:my-4 border-t border-t-[#00E7F9] h-0 w-full" />
+
+              <li>
                 <img src={finbooks} className="h-7 mx-auto md:mx-0" />
                 <p className="mt-[22px]">
                   Insights sobre os melhores livros de investimentos, economia e
                   dinheiro vindos de pessoas que estudaram a fundo esses livros.
                 </p>
               </li>
-              <hr className="bg-gradient-to-r border-0 mt-4 mb-8 from-[#00E7F9] to-transparent min-h-[2px] max-h-[2px] w-full" />
+              <div className="borderGradient inline-block my-8 md:my-4 border-t border-t-[#00E7F9] h-0 w-full" />
             </ul>
           </div>
           <div className="h-fit my-auto">

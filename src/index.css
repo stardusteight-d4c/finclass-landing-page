@@ -64,3 +64,17 @@ body {
   background: #00e7f9;
   border-radius: 20px;
 }
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+.animate-pings {
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.borderGradient {
+  border-image: linear-gradient(to right, #00E7F9, transparent) 30;
+}

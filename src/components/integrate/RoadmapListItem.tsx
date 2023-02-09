@@ -20,8 +20,8 @@ export const RoadmapListItem = ({
       <div
         className={`${
           isEven(index)
-            ? 'col-start-1 justify-start border'
-            : 'col-start-2 justify-end border'
+            ? 'col-start-1 justify-start'
+            : 'col-start-2 justify-end'
         } col-span-1 w-full h-full flex items-center`}
       >
         <img src={icon} className="w-10 h-10 mr-[30px]" />
@@ -34,7 +34,7 @@ export const RoadmapListItem = ({
       </div>
       <div
         style={{ gridColumnStart: !isEven(index) ? 'hidden' : '2' }}
-        className="col-span-1 h-[150px] bg-red-600"
+        className="col-span-1 h-[150px]"
       >
         {/* PLACEHOLDER */}
       </div>
