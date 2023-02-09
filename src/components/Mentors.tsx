@@ -60,7 +60,7 @@ export const Mentors = (props: Props) => {
           <h2 className="text-3xl md:text-4xl font-bold mt-3 !leading-[140%]">
           <strong className='textGradient'>Conheça</strong> os seus <br className='md:hidden'/> mentores
           </h2>
-          <span className="text-[#F5F5F5] mt-2 inline-block">
+          <span className="text-[#F5F5F5] md:text-xl mt-2 inline-block">
             Os professores da Finclass são os maiores especialistas do mercado
             financeiro mundial
           </span>

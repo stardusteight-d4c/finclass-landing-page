@@ -4,7 +4,7 @@
 
 html,
 body {
-  @apply max-w-[100vw] overflow-x-hidden scroll-smooth;
+  @apply max-w-[100vw] overflow-x-hidden scroll-smooth antialiased;
 }
 
 body {

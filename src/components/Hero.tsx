@@ -28,7 +28,7 @@ export const Hero = (props: Props) => {
             <h1 className="text-3xl md:text-5xl w-full md:max-w-[510px] lg:max-w-[520px] mb-8 !leading-[110%] tracking-wide font-bold">
               Aprenda a investir do zero com os melhores
             </h1>
-            <p className="!leading-[23.2px] mx-auto md:mx-0 w-full md:max-w-[510px] mb-4 font-light text-[#B4B4B4]">
+            <p className="!leading-[23.2px] md:text-lg mx-auto md:mx-0 w-full md:max-w-[510px] mb-4 font-light text-[#B4B4B4]">
               Conquiste sua liberdade financeira e entre para o mundo dos
               investimentos com os maiores especialistas do mercado.{' '}
             </p>

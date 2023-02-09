@@ -25,7 +25,7 @@ export const Contents = (props: Props) => {
             <ul>
               <li>
                 <img src={finclasses} className="h-7 mx-auto md:mx-0" />
-                <p className="mt-[22px]">
+                <p className="mt-[22px] text-lg font-light">
                   Aulas com alto nível de produção sobre diversos assuntos
                   relacionados a investimentos e finanças, onde você é ensinado
                   por grandes especialistas do mercado.
@@ -35,7 +35,7 @@ export const Contents = (props: Props) => {
 
               <li>
                 <img src={finseries} className="h-7 mx-auto md:mx-0" />
-                <p className="mt-[22px]">
+                <p className="mt-[22px] text-lg font-light">
                   Documentários originais que visam um entretenimento
                   relacionado ao mundo do dinheiro, trazendo grandes experts
                   mundiais.
@@ -45,7 +45,7 @@ export const Contents = (props: Props) => {
 
               <li>
                 <img src={finbooks} className="h-7 mx-auto md:mx-0" />
-                <p className="mt-[22px]">
+                <p className="mt-[22px] text-lg font-light">
                   Insights sobre os melhores livros de investimentos, economia e
                   dinheiro vindos de pessoas que estudaram a fundo esses livros.
                 </p>

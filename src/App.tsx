@@ -3,7 +3,8 @@ import { Finseries } from './components/Finseries'
 import { Hero } from './components/Hero'
 import { Mentors } from './components/Mentors'
 import { AppMobile } from './components/AppMobile'
-import { Roadmap } from './components/Roadmap'
+import { MinWidth768Roadmap } from './components/MinWidth768Roadmap'
+import { MaxWidth768Roadmap } from './components/MaxWidth768Roadmap'
 
 interface Props {}
 
@@ -15,7 +16,8 @@ export const App = (props: Props) => {
       <Contents />
       <Finseries />
       <AppMobile />
-      <Roadmap />
+      <MinWidth768Roadmap />
+      <MaxWidth768Roadmap />
     </main>
   )
 }

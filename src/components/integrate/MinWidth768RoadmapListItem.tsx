@@ -10,11 +10,10 @@ interface Props {
   index: number
 }
 
-export const RoadmapListItem = ({
+export const MinWidth768RoadmapListItem = ({
   index,
   data: { icon, title, description },
 }: Props) => {
-  console.log(!isEven(index))
   return (
     <>
       <div
@@ -31,7 +30,7 @@ export const RoadmapListItem = ({
         } w-10 h-10`} />
         <div>
           <h3 className="text-xl font-bold">{title}</h3>
-          <span className="font-light mt-2 inline-block w-[290px]">
+          <span className="font-light text-lg mt-2 !leading-snug inline-block w-[290px]">
             {description}
           </span>
         </div>

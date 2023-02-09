@@ -17,11 +17,11 @@ export const AppMobile = (props: Props) => {
             <h2 className="text-3xl md:text-4xl font-bold !leading-[120%] mt-3">
             <strong className='textGradient'>Conheça</strong> nosso <br className="md:hidden" /> app
             </h2>
-            <p className="inline-block mt-2 w-[70%] font-light text-[18px]">
+            <p className="inline-block mb-14 md:mb-0 mt-2 w-[70%] font-light md:text-xl !leading-snug">
               Aprenda com os melhores do mundo, onde e quando você quiser.
             </p>
           </div>
-          <div className='h-fit mx-auto md:mx-0 w-full max-w-[400px] md:max-w-none md:my-auto'>
+          <div className='h-fit text-center mx-auto md:mx-0 w-full max-w-[400px] md:max-w-none md:my-auto'>
             <ul>
               {appList.map((item) => (
                 <AppListItem {...item} />
