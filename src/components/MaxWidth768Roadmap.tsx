@@ -8,11 +8,36 @@ import { roadmapList } from '../data'
 import { MaxWidth768RoadmapListItem } from './integrate/MaxWidth768RoadmapListItem'
 import { useState } from 'react'
 import { Routes } from './MinWidth768Roadmap'
+import { MaxWidth768RoadmapAccordion } from './integrate/MaxWidth768RoadmapAccordion'
 
 interface Props {}
 
 export const MaxWidth768Roadmap = (props: Props) => {
   const [activeRoute, setActiveRoute] = useState<Routes>('beginner')
+
+  const routeAccordionProps = [
+    {
+      activeRoute,
+      setActiveRoute,
+      icon: alignLeft,
+      title: 'Iniciante',
+      route: 'beginner' as 'beginner',
+    },
+    {
+      activeRoute,
+      setActiveRoute,
+      icon: alignCenter,
+      title: 'Intermediário',
+      route: 'intermediary' as 'intermediary',
+    },
+    {
+      activeRoute,
+      setActiveRoute,
+      icon: alignRight,
+      title: 'Avançado',
+      route: 'advanced' as 'advanced',
+    },
+  ]
 
   return (
     <section className="block md:hidden max-w-[100vw] overflow-hidden bg-black">
@@ -31,47 +56,20 @@ export const MaxWidth768Roadmap = (props: Props) => {
             Você evolui junto com a gente
           </span>
         </div>
-        <div className="w-full h-fit">
-          <div className="flex flex-col items-center">
-            <img
-              src={accountPlaceholder}
-              alt="account-placeholder/svg"
-              className="w-[50px] h-50px"
-            />
-          </div>
+        <div className="flex flex-col items-center">
+          <img
+            src={accountPlaceholder}
+            alt="account-placeholder/svg"
+            className="w-[50px] h-50px"
+          />
+        </div>
+        <div className="w-full h-fit relative">
+          <div className="absolute -top-6 left-1/2 -translate-x-1/2 h-[100%] z-0 !w-0 border-l-[2px] border-l-[#00E7F9]" />
           <div>
-            <button
-              onClick={() => setActiveRoute('beginner')}
-              className={`${
-                activeRoute === 'beginner'
-                  ? 'border-[#00E7F9]'
-                  : 'border-[#949494]/20'
-              } border bg-[#0F1116] mt-10 py-4 px-4 font-bold text-lg rounded-md w-full text-center flex items-center justify-between`}
-            >
-              <img src={alignLeft} className="w-5 h-5" /> Iniciante
-              <img src={chevronDown} className="w-6 h-6" />
-            </button>
-
-            <div className="grid grid-cols-2 relative">
-              <div className="absolute z-0 left-1/2 -translate-x-1/2 h-full !w-0 border-l border-l-[#00E7F9]" />
-              {roadmapList.beginner.map((item, index) => (
-                <MaxWidth768RoadmapListItem
-                  data={item}
-                  index={index}
-                  key={item.icon}
-                />
-              ))}
-            </div>
+            {routeAccordionProps.map((button) => (
+              <MaxWidth768RoadmapAccordion {...button} />
+            ))}
           </div>
-
-          {/* <button className="bg-[#0F1116] mt-10 py-4 px-4 font-bold text-lg rounded-md w-full text-center flex items-center justify-between">
-            <img src={alignLeft} className="w-5 h-5" /> Intermediário
-            <img src={chevronDown} className="w-5 h-5" />
-          </button>
-          <button className="bg-[#0F1116] mt-10 py-4 px-4 font-bold text-lg rounded-md w-full text-center flex items-center justify-between">
-            <img src={alignLeft} className="w-5 h-5" /> Avançado
-            <img src={chevronDown} className="w-5 h-5" />
-          </button> */}
         </div>
       </div>
     </section>

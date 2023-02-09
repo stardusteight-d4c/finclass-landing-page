@@ -66,8 +66,8 @@ export const Mentors = (props: Props) => {
           </span>
         </div>
         <div className="relative">
-          <div className="absolute z-10 -left-16 inset-y-0 h-full w-[100px] md:w-[150px] bg-gradient-to-r from-black via-black to-transparent" />
-          <div className="absolute z-10 -right-16 inset-y-0 h-full w-[100px] md:w-[150px] bg-gradient-to-l from-black via-black to-transparent" />
+          <div className="absolute z-10 -left-16 inset-y-0 h-full w-[100px] md:w-[150px] bg-gradient-to-r from-black md:via-black to-transparent" />
+          <div className="absolute z-10 -right-16 inset-y-0 h-full w-[100px] md:w-[150px] bg-gradient-to-l from-black md:via-black to-transparent" />
           <div
             id="slider"
             ref={slider}

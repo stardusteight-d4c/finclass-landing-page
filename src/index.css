@@ -78,3 +78,7 @@ body {
 .borderGradient {
   border-image: linear-gradient(to right, #00E7F9, transparent) 30;
 }
+
+.borderGradientToBottom {
+  border-image: linear-gradient(to bottom, #00E7F9, #00E7F950) 30;
+}
