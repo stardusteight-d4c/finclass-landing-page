@@ -39,6 +39,27 @@ import getProfessionalInTheMarket from './assets/roadmap/get-professional-in-the
 import updateYourKnowledge from './assets/roadmap/update-your-knowledge.svg'
 import monthlyContent from './assets/roadmap/monthly-content.svg'
 
+import user1 from './assets/user1.png'
+import user2 from './assets/user2.png'
+import user3 from './assets/user3.png'
+
+type RoadmapListItem = {
+  icon: string
+  title: string
+  description: string
+}
+
+type Feedback = {
+  title: string
+  feedback: string
+}
+
+type User = {
+  avatar: string
+  name: string
+  role: string
+}
+
 interface Mentors {
   name: string
   img: string
@@ -57,16 +78,15 @@ interface AppListItem {
   description: string
 }
 
-type RoadmapListItem = {
-  icon: string
-  title: string
-  description: string
-}
-
 interface RoadmapList {
   beginner: RoadmapListItem[]
   intermediary: RoadmapListItem[]
   advanced: RoadmapListItem[]
+}
+
+interface Feedbacks {
+  user: User
+  feedback: Feedback
 }
 
 export const mentors: Mentors[] = [
@@ -280,3 +300,56 @@ export const roadmapList: RoadmapList = {
     },
   ],
 }
+
+export const feedbacks: Feedbacks[] = [
+  {
+    user: {
+      avatar: user1,
+      name: 'Sarah Fagundes',
+      role: 'Empreendedora - Curitiba',
+    },
+    feedback: {
+      title: 'A finclass mudou minha vida ',
+      feedback: `A Finclass veio para revolucionar tudo o que já vimos no mercado financeiro. 
+      A oportunidade de ter tanta gente incrível e de tão alto nível na palma da minha mão me 
+      traz liberdade, muita bagagem enquanto eu estou aprendendo.
+      <br />
+      <br />
+      Na Finclass está tudo organizado e “mastigado” para gente. Recomendo de olhos fechados, 
+      é a coisa mais incrível que eu já vi na internet. É literalmente uma Netflix dos 
+      investimentos - só que melhor!`,
+    },
+  },
+  {
+    user: {
+      avatar: user2,
+      name: 'Yasmin Rodrigues',
+      role: 'Gestora de Processos São Paulo',
+    },
+    feedback: {
+      title: 'Os maiores mentores de finanças do mundo!',
+      feedback: `A Finclass é muito completa, desde aulas, documentos e livros! Com os
+      maiores mentores de finanças do mundo! Jeito leve de aprender finanças e realmente 
+      mudar de vida, aumentando a nossa famosa bola de neve e sair da corrida dos ratos e
+      fazer seu dinheiro trabalhar por nós! Uma maneira de aprender um pouco todos os dias
+      sem ser cansativo, dentro da minha rotina! A finclass é expecional!`,
+    },
+  },
+  {
+    user: {
+      avatar: user3,
+      name: 'Carlos Junqueira',
+      role: 'Gestor de Processos São Paulo',
+    },
+    feedback: {
+      title: 'Jeito leve de aprender finanças',
+      feedback: `A plataforma tem um conceito incrível: incluir diversos temas relacionados 
+      a finanças em um mesmo lugar (aulas, documentários, livros, etc.).
+      <br />
+      <br />
+      As autoridades sobre os temas, até o momento, estão ótimas (Braga sobre vieses, 
+      Giambiagi sofre finanças públicas e Breno Perrucho sobre o início dos investimentos). 
+      A plataforma está fácil de mexer, bem intuitiva e com um design muito bonito.`,
+    },
+  },
+]

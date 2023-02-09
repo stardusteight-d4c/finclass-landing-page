@@ -22,6 +22,9 @@ module.exports = {
       backgroundImage: {
         hero: 'url(/bg-worlds-best.webp)',
       },
+      gridTemplateColumns: {
+        feedbackColumns: '400px 48px 620px',
+      },
     },
   },
   plugins: [],

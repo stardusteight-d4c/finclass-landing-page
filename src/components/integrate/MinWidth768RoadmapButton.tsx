@@ -21,7 +21,7 @@ export const MinWidth768RoadmapButton = ({
       onClick={() => setActiveRoute(route)}
       className={`${
         activeRoute === route ? 'border-[#00E7F9]' : 'border-[#949494]/20'
-      } border flex text-xl items-center transition-all duration-300 justify-center gap-x-3 rounded-md font-bold w-full max-w-[290px] py-6 bg-[#0F1116]`}
+      } border flex text-xl items-center transition-all duration-300 justify-center gap-x-3 rounded-lg font-bold w-full max-w-[290px] py-6 bg-[#0F1116]`}
     >
       <img src={icon} />
       {title}

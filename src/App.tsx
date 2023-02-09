@@ -5,6 +5,7 @@ import { Mentors } from './components/Mentors'
 import { AppMobile } from './components/AppMobile'
 import { MinWidth768Roadmap } from './components/MinWidth768Roadmap'
 import { MaxWidth768Roadmap } from './components/MaxWidth768Roadmap'
+import { Feedbacks } from './components/Feedbacks'
 
 interface Props {}
 
@@ -18,6 +19,7 @@ export const App = (props: Props) => {
       <AppMobile />
       <MinWidth768Roadmap />
       <MaxWidth768Roadmap />
+      <Feedbacks />
     </main>
   )
 }

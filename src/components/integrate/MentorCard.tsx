@@ -22,7 +22,7 @@ export const MentorCard = ({ name, img, description, videoID }: Props) => {
         src={img}
         className="min-w-[260px] group-hover:brightness-125 max-w-[260px] h-[580px] select-none duration-1000 transition-all"
       />
-      <div className="bg-gradient-to-t from-black to-transparent absolute md:opacity-0 group-hover:opacity-100 transition-all duration-1000 inset-0 flex items-center flex-col justify-center">
+      <div className="bg-gradient-to-t from-black/50 to-transparent absolute md:opacity-0 group-hover:opacity-100 transition-all duration-1000 inset-0 flex items-center flex-col justify-center">
         <div className="flex flex-col mt-80 text-right items-end pl-16 pr-2">
           <h3 className="text-2xl font-bold pb-2 select-none ">{name}</h3>
           <span className="text-base font-light text-white select-none ">
