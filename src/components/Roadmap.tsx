@@ -56,14 +56,14 @@ export const Roadmap = (props: Props) => {
           </div>
 
           <div className="relative h-[75px] mt-10">
-            <div className="flex absolute w-full z-10 items-center gap-x-4 justify-between">
+            <div className="flex absolute w-full z-10 items-center gap-x-16 lg:gap-x-4 justify-between">
               <button
                 onClick={() => setActiveRoute('beginner')}
                 className={`${
                   activeRoute === 'beginner'
                     ? 'border-[#00E7F9]'
                     : 'border-[#949494]/20'
-                } border flex items-center justify-center gap-x-2 rounded-md font-bold w-full max-w-[290px] py-6 bg-[#0F1116]`}
+                } border flex items-center transition-all duration-300 justify-center gap-x-2 rounded-full font-bold w-full max-w-[290px] py-6 bg-[#0F1116]`}
               >
                 <img src={alignLeft} alt="" />
                 Iniciante
@@ -74,7 +74,7 @@ export const Roadmap = (props: Props) => {
                   activeRoute === 'intermediary'
                     ? 'border-[#00E7F9]'
                     : 'border-[#949494]/20'
-                } border flex items-center justify-center gap-x-2 rounded-md font-bold w-full max-w-[290px] py-6 bg-[#0F1116]`}
+                } border flex items-center transition-all duration-300 justify-center gap-x-2 rounded-full font-bold w-full max-w-[290px] py-6 bg-[#0F1116]`}
               >
                 <img src={alignCenter} alt="" />
                 Intermediário
@@ -85,7 +85,7 @@ export const Roadmap = (props: Props) => {
                   activeRoute === 'advanced'
                     ? 'border-[#00E7F9]'
                     : 'border-[#949494]/20'
-                } border flex items-center justify-center gap-x-2 rounded-md font-bold w-full max-w-[290px] py-6 bg-[#0F1116]`}
+                } border flex items-center transition-all duration-300 justify-center gap-x-2 rounded-full font-bold w-full max-w-[290px] py-6 bg-[#0F1116]`}
               >
                 <img src={alignRight} alt="" />
                 Avançado
@@ -96,7 +96,7 @@ export const Roadmap = (props: Props) => {
           <div className="relative grid grid-cols-2 mt-36">
             <div className="absolute z-0 top-16 left-1/2 -translate-x-1/2 h-[77%] !w-0 border-l border-l-[#00E7F9]" />
             <div className="absolute top-[51px] left-1/2 -translate-x-1/2 z-10">
-              <div className="borderGradient absolute top-5 -translate-x-full left-5 h-0 border-t w-[225px]" />
+              <div className="borderGradient absolute top-5 -translate-x-full left-5 h-0 border-t mmd:w-[65px] xxll:w-[150px] xl:w-[225px]" />
               <img
                 src={circle}
                 alt="trial-point/svg"
@@ -109,7 +109,7 @@ export const Roadmap = (props: Props) => {
               />
             </div>
             <div className="absolute top-[200px] left-1/2 -translate-x-1/2 z-10">
-              <div className="borderGradient absolute top-5 left-5 h-0 border-t w-[225px]" />
+              <div className="borderGradient absolute top-5 left-5 h-0 border-t mmd:w-[65px] xxll:w-[150px] xl:w-[225px]" />
               <img
                 src={circle}
                 alt="trial-point/svg"
@@ -122,7 +122,7 @@ export const Roadmap = (props: Props) => {
               />
             </div>
             <div className="absolute top-[351px] left-1/2 -translate-x-1/2 z-10">
-              <div className="borderGradient absolute top-5 -translate-x-full left-5 h-0 border-t w-[225px]" />
+              <div className="borderGradient absolute top-5 -translate-x-full left-5 h-0 border-t mmd:w-[65px] xxll:w-[150px] xl:w-[225px]" />
               <img
                 src={circle}
                 alt="trial-point/svg"
@@ -135,7 +135,7 @@ export const Roadmap = (props: Props) => {
               />
             </div>
             <div className="absolute top-[84.3%] left-1/2 -translate-x-1/2 z-10">
-              <div className="borderGradient absolute top-5 left-5 h-0 border-t w-[225px]" />
+              <div className="borderGradient absolute top-5 left-5 h-0 border-t mmd:w-[65px] xxll:w-[150px] xl:w-[225px]" />
               <img
                 src={circle}
                 alt="trial-point/svg"
@@ -159,7 +159,7 @@ export const Roadmap = (props: Props) => {
 
 const style = {
   ghostContainerTopLeft: (activeRoute: Routes) => {
-    const defaultStyle = 'col-span-1 w-full h-[96px]'
+    const defaultStyle = 'col-span-1 w-full h-[96px] transition-all duration-300'
     if (activeRoute === 'beginner') {
       return `border-t border-l border-t-[#00E7F9] border-l-[#00E7F9] ${defaultStyle}`
     } else {
@@ -167,7 +167,7 @@ const style = {
     }
   },
   ghostContainerTopRight: (activeRoute: Routes) => {
-    const defaultStyle = 'col-span-1 w-full h-[96px]'
+    const defaultStyle = 'col-span-1 w-full h-[96px] transition-all duration-300'
     if (activeRoute === 'intermediary') {
       return `border-l border-t border-r border-l-[#00E7F9] border-t-[#949494]/20 border-r-[#949494]/20 ${defaultStyle}`
     } else if (activeRoute === 'advanced') {
@@ -177,7 +177,7 @@ const style = {
     }
   },
   ghostContainerLeftBottom: (activeRoute: Routes) => {
-    const defaultStyle = 'col-span-1 w-full h-[96px]'
+    const defaultStyle = 'col-span-1 w-full h-[96px] transition-all duration-300'
     if (activeRoute === 'beginner') {
       return `border-l border-b border-l-[#00E7F9] border-b-[#00E7F9] ${defaultStyle}`
     } else {
@@ -185,7 +185,7 @@ const style = {
     }
   },
   ghostContainerRightBottom: (activeRoute: Routes) => {
-    const defaultStyle = 'col-span-1 w-full h-[96px]'
+    const defaultStyle = 'col-span-1 w-full h-[96px] transition-all duration-300'
     if (activeRoute === 'advanced') {
       return `border-l border-b border-r border-r-[#00E7F9] border-b-[#00E7F9] border-l-[#949494]/20 ${defaultStyle}`
     } else if (activeRoute === 'intermediary') {

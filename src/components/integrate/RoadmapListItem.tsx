@@ -20,11 +20,15 @@ export const RoadmapListItem = ({
       <div
         className={`${
           isEven(index)
-            ? 'col-start-1 justify-start'
-            : 'col-start-2 justify-end'
+            ? 'col-start-1 w-[50%] md:w-auto justify-end flex-row-reverse'
+            : 'col-start-2 w-[50%] md:w-auto justify-end'
         } col-span-1 w-full h-full flex items-center`}
       >
-        <img src={icon} className="w-10 h-10 mr-[30px]" />
+        <img src={icon} className={`${
+           isEven(index)
+           ? 'ml-[30px]'
+           : 'mr-[30px]'
+        } w-10 h-10`} />
         <div>
           <h3 className="text-xl font-bold">{title}</h3>
           <span className="font-light mt-2 inline-block w-[290px]">
