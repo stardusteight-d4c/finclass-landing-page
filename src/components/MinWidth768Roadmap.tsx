@@ -73,14 +73,18 @@ export const MinWidth768Roadmap = (props: Props) => {
           <div className={style.buttonsWrapper}>
             <div className={style.buttonsContainer}>
               {routeButtonsProps.map((button) => (
-                <MinWidth768RoadmapButton {...button} />
+                <MinWidth768RoadmapButton key={button.title} {...button} />
               ))}
             </div>
           </div>
           <div className={style.listWrapper}>
             <MinWidth768SkeletonRoadmap />
             {roadmapList[activeRoute].map((item, index) => (
-              <MinWidth768RoadmapListItem data={item} index={index} key={item.icon} />
+              <MinWidth768RoadmapListItem
+                data={item}
+                index={index}
+                key={item.icon}
+              />
             ))}
           </div>
         </div>

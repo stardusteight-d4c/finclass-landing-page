@@ -1,10 +1,26 @@
+import { useEffect, useState } from 'react'
 import finclass from '../../assets/finclass-circle.png'
 
 interface Props {}
 
 export const Sticky = (props: Props) => {
+  // const [scrollPosition, setScrollPosition] = useState<number>(0)
+
+  // const handleScroll = () => {
+  //   const position = document.querySelector('#main')?.scrollTop!
+  //   setScrollPosition(position)
+  // }
+
+  // useEffect(() => {
+  //   document.querySelector('#main')?.addEventListener('scroll', handleScroll, { passive: true })
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll)
+  //   }
+  // }, [scrollPosition])
+
   return (
     <div className="fixed group bottom-5 right-5 md:bottom-12 md:right-12 cursor-pointer z-40">
+
       <div className="flex items-center justify-center gap-x-4">
         <span className="opacity-0 hidden group-hover:block group-hover:opacity-100 text-xl font-medium transition-all duration-200">
           Fale conosco
@@ -19,6 +35,7 @@ export const Sticky = (props: Props) => {
           />
         </a>
       </div>
+
     </div>
   )
 }

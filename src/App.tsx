@@ -14,7 +14,7 @@ interface Props {}
 
 export const App = (props: Props) => {
   return (
-    <main className="max-h-screen overflow-y-scroll">
+    <main id="main" className="">
       <Hero />
       <Mentors />
       <Contents />

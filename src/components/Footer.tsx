@@ -9,29 +9,31 @@ import youtube from '../assets/socials/youtube.svg'
 import googlePlay from '../assets/google-play.png'
 import appStore from '../assets/app-store.png'
 
+import arrowCircleDown from '../assets/arrow-circle-down.svg'
+
 interface Props {}
 
 export const Footer = (props: Props) => {
   return (
     <footer className="max-w-[100vw] bg-black">
-      <div className="pt-44 pb-20 max-w-screen-xl w-full mx-auto px-4 md:px-4">
-        <div className="grid grid-cols-footerColumns gap-x-4 h-[366px]">
+      <div className="pt-14 md:pt-44 pb-14 md:pb-20 max-w-screen-xl w-full mx-auto px-4 md:px-4">
+        <div className="grid grid-cols-1 md:grid-cols-footerColumns gap-x-4 md:h-[366px]">
           <div className="col-span-1 h-full flex flex-col items-start justify-between">
             <div>
               <img
                 src={finclassLogo}
                 alt="finclass-logo/svg"
-                className="w-[167px]"
+                className="w-[167px] pb-3 md:pb-0"
               />
             </div>
             <div>
               <div className="borderGradient h-0 border-t w-[80%]" />
-              <span className="inline-block mt-4 mr-4 text-white/60">
+              <span className="inline-block mt-2 md:mt-4 mr-4 text-white/60">
                 Aprenda finanças com os melhores do mundo.
               </span>
             </div>
           </div>
-          <div className="col-span-1">
+          <div className="col-span-1 mt-8 md:mt-0">
             <h3 className="text-xl font-semibold mb-8">Transparência</h3>
             <ul className="space-y-4">
               <li className="text-white/60 cursor-pointer hover:underline transition-all duration-300 tracking-wide">
@@ -48,7 +50,7 @@ export const Footer = (props: Props) => {
               </li>
             </ul>
           </div>
-          <div className="col-span-1">
+          <div className="col-span-1 mt-8 md:mt-0">
             <h3 className="text-xl font-semibold mb-8">Fale conosco</h3>
             <ul className="space-y-4">
               <li className="text-white/60 cursor-pointer hover:underline transition-all duration-300 tracking-wide">
@@ -59,7 +61,7 @@ export const Footer = (props: Props) => {
               </li>
             </ul>
           </div>
-          <div className="col-span-1">
+          <div className="col-span-1 mt-8 md:mt-0">
             <h3 className="text-xl font-semibold mb-8">Redes sociais</h3>
             <ul className="space-y-4">
               <li className="text-white/60 cursor-pointer hover:underline transition-all duration-300 tracking-wide">
@@ -158,7 +160,7 @@ export const Footer = (props: Props) => {
               </li>
             </ul>
           </div>
-          <div className="col-span-1">
+          <div className="col-span-1 mt-8 md:mt-0">
             <h3 className="text-xl font-semibold mb-8">Baixe nosso app</h3>
             <ul className="flex items-center gap-x-10">
               <li className="text-white/60 cursor-pointer hover:underline transition-all duration-300 tracking-wide">
@@ -186,7 +188,15 @@ export const Footer = (props: Props) => {
         <span className="text-white/50">
           {new Date().getFullYear()} © Todos os direitos reservados. Finclass
         </span>
-        {/* <img src="" alt="backtotop" /> */}
+        <div className="flex items-center gap-x-3 mt-3">
+          <img
+            onClick={() => window.scrollTo(0, 0)}
+            src={arrowCircleDown}
+            alt="backToTop"
+            className="rotate-180 cursor-pointer"
+          />
+          <span className="text-white/50 font-light">Voltar para o topo</span>
+        </div>
       </div>
     </footer>
   )

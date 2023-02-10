@@ -48,10 +48,10 @@ export const Hero = (props: Props) => {
                 R$ 59,90/mês no plano anual.
               </strong>
             </span>
-            <span className="text-sm cursor-pointer w-fit mx-auto md:mx-0 text-[#86888D] flex items-center gap-x-2 mt-8">
+            <span className="text-sm w-fit mx-auto md:mx-0 text-[#86888D] flex items-center gap-x-2 mt-8">
               Descubra como{' '}
               <a href="#mentors">
-                <img src={arrowCircleDown} alt="" />
+                <img src={arrowCircleDown} className="cursor-pointer" />
               </a>
             </span>
           </div>

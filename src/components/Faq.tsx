@@ -60,7 +60,7 @@ export const Faq = (props: Props) => {
           </div>
           <div className="mt-8">
             {faq[activeTab].map((item) => (
-              <Accordion title={item.title} content={item.content} />
+              <Accordion key={item.title} title={item.title} content={item.content} />
             ))}
           </div>
         </div>

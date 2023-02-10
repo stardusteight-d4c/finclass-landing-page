@@ -67,7 +67,7 @@ export const MaxWidth768Roadmap = (props: Props) => {
           <div className="absolute -top-6 left-1/2 -translate-x-1/2 h-[100%] z-0 !w-0 border-l-[2px] border-l-[#00E7F9]" />
           <div>
             {routeAccordionProps.map((button) => (
-              <MaxWidth768RoadmapAccordion {...button} />
+              <MaxWidth768RoadmapAccordion key={button.title} {...button} />
             ))}
           </div>
         </div>
