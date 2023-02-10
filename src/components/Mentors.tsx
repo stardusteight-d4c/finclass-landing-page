@@ -1,7 +1,9 @@
 import graduationHat from '../assets/graduation-hat.svg'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { mentors } from '../data'
 import { MentorCard } from './integrate/MentorCard'
+import { motion } from 'framer-motion'
+import { mentorsHeadingAnimation } from '../utils/animations'
 
 interface Props {}
 
@@ -47,32 +49,31 @@ export const Mentors = (props: Props) => {
       }
     }
   }, [slider])
-
   return (
-    <section id='mentors' className="max-w-[100vw] overflow-hidden bg-black">
-      <div className="md:pt-44 max-w-screen-xl w-full mx-auto px-4 md:px-4">
-        <div className="text-center">
+    <section id="mentors" className={style.wrapper}>
+      <div className={style.contentWrapper}>
+        <motion.div
+          {...style.handleHeading().mentorsHeadingAnimation}
+          className={style.handleHeading().className}
+        >
           <img
             src={graduationHat}
             alt="graduation-hat/svg"
-            className="w-fit mx-auto"
+            className={style.icon}
           />
-          <h2 className="text-3xl md:text-4xl font-bold mt-3 !leading-[140%]">
-          <strong className='textGradient'>Conheça</strong> os seus <br className='md:hidden'/> mentores
+          <h2 className={style.heading}>
+            <strong className={style.headingStrong}>Conheça</strong> os seus{' '}
+            <br className="md:hidden" /> mentores
           </h2>
-          <span className="text-[#F5F5F5] md:text-xl mt-2 inline-block">
+          <span className={style.span}>
             Os professores da Finclass são os maiores especialistas do mercado
             financeiro mundial
           </span>
-        </div>
-        <div className="relative">
-          <div className="absolute z-10 -left-16 inset-y-0 h-full w-[100px] md:w-[150px] bg-gradient-to-r from-black md:via-black to-transparent" />
-          <div className="absolute z-10 -right-16 inset-y-0 h-full w-[100px] md:w-[150px] bg-gradient-to-l from-black md:via-black to-transparent" />
-          <div
-            id="slider"
-            ref={slider}
-            className="scrollbar-hide pl-0 pr-8 md:pl-2 md:pr-14 my-10 mx-auto flex gap-x-1 items-center scroll-smooth overflow-x-scroll relative"
-          >
+        </motion.div>
+        <div className={style.sliderWrapper}>
+          <div className={style.overlayLeft} />
+          <div className={style.overlayRight} />
+          <div id="slider" ref={slider} className={style.sliderContainer}>
             {mentors.map((mentor) => (
               <MentorCard key={mentor.name} {...mentor} />
             ))}
@@ -81,4 +82,23 @@ export const Mentors = (props: Props) => {
       </div>
     </section>
   )
+}
+
+const style = {
+  wrapper: `max-w-[100vw] overflow-hidden bg-black`,
+  contentWrapper: `pt-10 md:pt-44 max-w-screen-xl w-full mx-auto px-4 md:px-4`,
+  handleHeading: () => {
+    return {
+      mentorsHeadingAnimation,
+      className: `text-center`,
+    }
+  },
+  icon: `w-fit mx-auto`,
+  heading: `text-3xl md:text-4xl font-bold mt-3 !leading-[140%]`,
+  headingStrong: `textGradient`,
+  span: `text-[#F5F5F5] md:text-xl mt-2 inline-block`,
+  sliderWrapper: `relative`,
+  overlayLeft: `absolute z-10 -left-16 inset-y-0 h-full w-[100px] md:w-[150px] bg-gradient-to-r from-black md:via-black to-transparent`,
+  overlayRight: `absolute z-10 -right-16 inset-y-0 h-full w-[100px] md:w-[150px] bg-gradient-to-l from-black md:via-black to-transparent`,
+  sliderContainer: `scrollbar-hide pl-0 pr-8 md:pl-2 md:pr-14 my-10 mx-auto flex gap-x-1 items-center scroll-smooth overflow-x-scroll relative`,
 }

@@ -49,17 +49,33 @@ export const Navbar = (props: Props) => {
           <div className="flex text-sm items-center gap-x-6 md:gap-x-11">
             <div className="hidden md:flex hover:drop-shadow-md  hover:brightness-105 duration-300 transition-all ease-in-out items-center gap-x-[10px] cursor-pointer">
               <img src={chevronRight} alt="chevron-right/icon" />
-              <span className="inline-block font-semibold">Blog</span>
+              <a
+                href="https://finclass.com/blog"
+                target="_blank"
+                className="inline-block font-semibold"
+              >
+                Blog
+              </a>
             </div>
             <div className="hidden md:flex items-center gap-x-[10px] cursor-pointer">
               <img src={chevronRight} alt="chevron-right/icon" />
-              <span className="inline-block font-semibold">Assine agora</span>
+              <a
+                href="https://app.finclass.com/short-checkout"
+                target="_blank"
+                className="inline-block font-semibold"
+              >
+                Assine agora
+              </a>
             </div>
             <div className="flex items-center gap-x-[10px] cursor-pointer">
               <img src={accountPlaceholder} alt="account-placeholder/icon" />
-              <span className="inline-block font-semibold">
+              <a
+                href="https://app.finclass.com/login"
+                target="_blank"
+                className="inline-block font-semibold"
+              >
                 {!minWith768px ? 'Entrar' : 'Já sou assinante'}
-              </span>
+              </a>
             </div>
             <img
               src={menu}

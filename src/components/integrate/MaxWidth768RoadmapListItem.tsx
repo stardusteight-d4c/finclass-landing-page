@@ -1,5 +1,6 @@
 import { isEven } from '../../utils/isEven'
 import circle from '../../assets/roadmap/circle.svg'
+import { motion } from 'framer-motion'
 
 interface Props {
   data: {
@@ -15,7 +16,18 @@ export const MaxWidth768RoadmapListItem = ({
   data: { icon, title, description },
 }: Props) => {
   return (
-    <div
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false }}
+      transition={{ duration: 1 }}
+      variants={{
+        visible: { opacity: 1, scale: 1 },
+        hidden: {
+          opacity: 0,
+          scale: 0.5,
+        },
+      }}
       className={`${
         isEven(index)
           ? 'col-start-1 w-[50%] columns-1 pr-6 text-right'
@@ -43,6 +55,6 @@ export const MaxWidth768RoadmapListItem = ({
           {description}
         </span>
       </div>
-    </div>
+    </motion.div>
   )
 }

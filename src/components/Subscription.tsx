@@ -7,10 +7,13 @@ interface Props {}
 export const Subscription = (props: Props) => {
   return (
     <section className="max-w-[100vw] relative overflow-visible bg-black pb-[70px] border-b border-b-[#ffffff2e]">
-      <div className="pt-28 mdd:pt-60 max-w-screen-xl w-full mx-auto px-4 md:px-4">
+      <div className="pt-28 mdd:pt-64 max-w-screen-xl w-full mx-auto px-4 md:px-4">
         <div className="grid grid-cols-1 mdd:grid-cols-2">
           <div className="col-span-1">
-            <img src={appBannerMobile} className="block mdd:hidden mx-auto w-full max-w-[500px]" />
+            <img
+              src={appBannerMobile}
+              className="block mdd:hidden mx-auto w-full max-w-[500px]"
+            />
             <img
               src={appBannerDesktop}
               alt="app-banner/png"
@@ -38,7 +41,11 @@ export const Subscription = (props: Props) => {
                   <span className="textGradient">/mês no plano anual</span>
                 </span>
               </p>
-              <a className="relative cursor-pointer hover:ring-1  active:scale-95 transition-all duration-300 hover:ring-[#00e7f9] w-full max-w-[280px] inline-flex items-center justify-center tracking-wider px-6 py-3 overflow-hidden font-semibold text-white rounded-md group shadow-lg shadow-white/10">
+              <a
+                href="https://app.finclass.com/short-checkout"
+                target="_blank"
+                className="relative cursor-pointer hover:ring-1  active:scale-95 transition-all duration-300 hover:ring-[#00e7f9] w-full max-w-[280px] inline-flex items-center justify-center tracking-wider px-6 py-3 overflow-hidden font-semibold text-white rounded-md group shadow-lg shadow-white/10"
+              >
                 <span className="absolute inset-0 w-full h-full opacity-1 group-hover:opacity-0 transition duration-300 ease-out opacity-1 bg-gradient-to-br from-[#0093dc] to-[#00bac7]"></span>
                 <span className="relative group-hover:text-[#00E7F9]">
                   {' '}

@@ -1,5 +1,4 @@
 import appIcon from '../assets/app/app-icon.svg'
-import finclassCommunity from '../assets/app/finclass-community.png'
 import googlePlayDownload from '../assets/google-play-download.png'
 import appStoreDownload from '../assets/app-store-download.png'
 import { appList } from '../data'
@@ -9,35 +8,35 @@ interface Props {}
 
 export const AppMobile = (props: Props) => {
   return (
-    <section className="max-w-[100vw] overflow-hidden bg-black">
-      <div className="pt-16 md:pt-44 pb-11 max-w-screen-xl w-full mx-auto px-4">
-        <div className="grid md:grid-cols-2">
-          <div className="text-center md:text-left col-span-1 md:w-[310px] mmd:w-[410px] xl:w-[510px]">
-            <img src={appIcon} className="w-8 h-8 mx-auto md:mx-0" />
-            <h2 className="text-3xl md:text-4xl font-bold !leading-[120%] mt-3">
-              <strong className="textGradient">Conheça</strong> nosso{' '}
+    <section className={style.wrapper}>
+      <div className={style.contentWrapper}>
+        <div className={style.gridContainer}>
+          <div className={style.headingContainer}>
+            <img src={appIcon} className={style.appIcon} />
+            <h2 className={style.heading}>
+              <strong className={style.strong}>Conheça</strong> nosso{' '}
               <br className="md:hidden" /> app
             </h2>
-            <p className="inline-block text-white/80 text-sm mb-14 md:mb-0 mt-2 w-[70%] md:text-xl !leading-snug">
+            <span className={style.span}>
               Aprenda com os melhores do mundo, onde e quando você quiser.
-            </p>
+            </span>
           </div>
-          <div className="h-fit text-center mx-auto md:mx-0 w-full max-w-[400px] md:max-w-none md:my-auto">
+          <div className={style.appListWrapper}>
             <ul>
               {appList.map((item) => (
                 <AppListItem key={item.title} {...item} />
               ))}
             </ul>
-            <div className="flex mdd:-ml-5 flex-col md:flex-row items-center gap-y-8 gap-x-4 mt-10">
+            <div className={style.downloadsContainer}>
               <img
                 src={appStoreDownload}
                 alt="download via App Store"
-                className="w-[190px] hover:brightness-110 cursor-pointer"
+                className={style.downloadImg}
               />
               <img
                 src={googlePlayDownload}
                 alt="download via Google Play"
-                className="w-[190px] hover:brightness-110 cursor-pointer"
+                className={style.downloadImg}
               />
             </div>
           </div>
@@ -45,4 +44,18 @@ export const AppMobile = (props: Props) => {
       </div>
     </section>
   )
+}
+
+const style = {
+  wrapper: `max-w-[100vw] overflow-hidden bg-black`,
+  contentWrapper: `pt-20 md:pt-44 pb-11 max-w-screen-xl w-full mx-auto px-4`,
+  gridContainer: `grid md:grid-cols-2`,
+  headingContainer: `text-center md:text-left col-span-1 md:w-[310px] mmd:w-[410px] xl:w-[510px]`,
+  appIcon: `w-8 h-8 mx-auto md:mx-0`,
+  heading: `text-3xl md:text-4xl font-bold !leading-[120%] mt-3`,
+  strong: `textGradient`,
+  span: `inline-block text-white/80 text-sm mb-14 md:mb-0 mt-2 w-[70%] md:text-xl !leading-snug`,
+  appListWrapper: `h-fit text-center mx-auto md:mx-0 w-full max-w-[400px] md:max-w-none md:my-auto`,
+  downloadsContainer: `flex mdd:-ml-5 flex-col md:flex-row items-center gap-y-8 gap-x-4 mt-10`,
+  downloadImg: `w-[190px] hover:brightness-110 cursor-pointer`,
 }

@@ -27,19 +27,19 @@ export const Feedbacks = (props: Props) => {
   }
 
   return (
-    <section className="max-w-[100vw] overflow-hidden bg-black">
-      <div className="pt-16 md:pt-28 pb-11 max-w-screen-xl w-full mx-auto px-4">
-        <div className="flex flex-col">
-          <div className="text-center md:text-left md:w-[310px] mmd:w-[410px] xl:w-[510px]">
-            <img src={feedbackIcon} className="w-8 h-8 mx-auto md:mx-0" />
-            <h2 className="text-3xl md:text-4xl font-bold !leading-[120%] mt-3">
-              <strong className="textGradient">O que </strong> estão dizendo{' '}
+    <section className={style.wrapper}>
+      <div className={style.contentWrapper}>
+        <div className={style.headingWrapper}>
+          <div className={style.headingContainer}>
+            <img src={feedbackIcon} className={style.feedbackIcon} />
+            <h2 className={style.heading}>
+              <strong className={style.strong}>O que </strong> estão dizendo{' '}
               <br /> sobre a Finclass
             </h2>
           </div>
         </div>
-        <div className="grid grid-cols-1 grid-rows-smallRows md:grid-cols-mediumFeedbackColumns md:grid-rows-mediumRows lg:grid-rows-none lg:grid-cols-feedbackColumns items-center md:gap-x-4 lg:gap-x-[100px] mt-14">
-          <div className="hidden md:flex flex-col gap-y-6 col-span-1 col-start-1 row-span-1 row-start-2 lg:row-start-auto">
+        <div className={style.feedbacksWrapper}>
+          <div className={style.minWidth768FeedbackAuthorWrapper}>
             {feedbacks.map((feedback, index) => (
               <AuthorFeedbackCard
                 key={feedback.user.name}
@@ -50,26 +50,43 @@ export const Feedbacks = (props: Props) => {
               />
             ))}
           </div>
-          <div className="col-span-1 row-span-1 row-start-3 md:col-start-2 md:row-span-1 md:row-start-1 lg:row-start-auto w-full lg:w-fit lg:my-auto">
-            <div className="flex mt-4 md:mt-0 flex-row ml-auto lg:flex-col w-fit h-fit gap-x-4 mb-4 lg:mb-0 gap-y-4">
+          <div className={style.arrowsWrapper}>
+            <div className={style.arrowsContainer}>
               <img
                 onClick={decrementSelectedFeedback}
                 src={arrowCircleDown}
-                className="w-12 h-12 rotate-90 lg:rotate-180 cursor-pointer"
+                className={style.decrementArrow}
               />
               <img
                 onClick={incrementSelectedFeedback}
                 src={arrowCircleDown}
-                className="w-12 h-12 -rotate-90 lg:rotate-0 cursor-pointer"
+                className={style.incrementArrow}
               />
             </div>
           </div>
           <Feedback {...feedbacks[selectedFeeback].feedback} />
-          <div className="block md:hidden row-start-2 row-span-1 col-span-1 w-full">
+          <div className={style.maxWidth768FeedbackAuthorWrapper}>
             <AuthorFeedbackCard {...feedbacks[selectedFeeback].user} />
           </div>
         </div>
       </div>
     </section>
   )
+}
+
+const style = {
+  wrapper: `max-w-[100vw] overflow-hidden bg-black`,
+  contentWrapper: `pt-16 md:pt-28 pb-11 max-w-screen-xl w-full mx-auto px-4`,
+  headingWrapper: `flex flex-col`,
+  headingContainer: `text-center md:text-left md:w-[310px] mmd:w-[410px] xl:w-[510px]`,
+  feedbackIcon: `w-8 h-8 mx-auto md:mx-0`,
+  heading: `text-3xl md:text-4xl font-bold !leading-[120%] mt-3`,
+  strong: `textGradient`,
+  feedbacksWrapper: `grid grid-cols-1 grid-rows-smallRows md:grid-cols-mediumFeedbackColumns md:grid-rows-mediumRows lg:grid-rows-none lg:grid-cols-feedbackColumns items-center md:gap-x-4 lg:gap-x-[100px] mt-14`,
+  minWidth768FeedbackAuthorWrapper: `hidden md:flex flex-col gap-y-6 col-span-1 col-start-1 row-span-1 row-start-2 lg:row-start-auto`,
+  arrowsWrapper: `col-span-1 row-span-1 row-start-3 md:col-start-2 md:row-span-1 md:row-start-1 lg:row-start-auto w-full lg:w-fit lg:my-auto`,
+  arrowsContainer: `flex mt-4 md:mt-0 flex-row ml-auto lg:flex-col w-fit h-fit gap-x-4 mb-4 lg:mb-0 gap-y-4`,
+  decrementArrow: `w-12 h-12 rotate-90 lg:rotate-180 cursor-pointer`,
+  incrementArrow: `w-12 h-12 -rotate-90 lg:rotate-0 cursor-pointer`,
+  maxWidth768FeedbackAuthorWrapper: `block md:hidden row-start-2 row-span-1 col-span-1 w-full`,
 }

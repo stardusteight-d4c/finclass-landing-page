@@ -43,6 +43,10 @@ import user1 from './assets/user1.png'
 import user2 from './assets/user2.png'
 import user3 from './assets/user3.png'
 
+import finclasses from './assets/contents/finclasses.svg'
+import finseries from './assets/contents/finseries.svg'
+import finbooks from './assets/contents/finbooks.svg'
+
 type RoadmapListItem = {
   icon: string
   title: string
@@ -72,7 +76,12 @@ interface Mentors {
   videoID: string
 }
 
-interface ContentListItem {
+interface ContentsListItem {
+  img: string
+  content: string
+}
+
+interface ContentSquareListItem {
   icon: string
   title: string
 }
@@ -157,7 +166,27 @@ export const mentors: Mentors[] = [
   },
 ]
 
-export const contents: ContentListItem[] = [
+export const contentsList: ContentsListItem[] = [
+  {
+    img: finclasses,
+    content: `Aulas com alto nível de produção sobre diversos assuntos
+    relacionados a investimentos e finanças, onde você é ensinado
+    por grandes especialistas do mercado.`,
+  },
+  {
+    img: finseries,
+    content: `Documentários originais que visam um entretenimento
+    relacionado ao mundo do dinheiro, trazendo grandes experts
+    mundiais.`,
+  },
+  {
+    img: finbooks,
+    content: `Insights sobre os melhores livros de investimentos, economia e
+    dinheiro vindos de pessoas que estudaram a fundo esses livros.`,
+  },
+]
+
+export const contentsSquareList: ContentSquareListItem[] = [
   {
     icon: treasuryDirect,
     title: 'Tesouro Direto',
@@ -439,39 +468,40 @@ export const faq: Faq = {
       Importante: No primeiro mês de renovação da assinatura, caso você opte pelo 
       pagamento parcelado, o valor total da anuidade irá comprometer o limite do 
       seu cartão, mas apenas o valor da parcela deverá ser pago. O prazo de 
-      reembolso/estorno pode variar de acordo com a operadora do seu cartão.`
+      reembolso/estorno pode variar de acordo com a operadora do seu cartão.`,
     },
     {
       title: 'Como funciona a garantia de 7 dias e reembolso?',
       content: `Segundo o artigo 49º do Código de Defesa do Consumidor, o consumidor 
       poderá desistir de sua compra no período de até 07 dias corridos e ter os valores 
       pagos reembolsados. Logo, caso mude de ideia dentro do prazo de 7 dias da contratação, 
-      você pode solicitar o cancelamento com direito ao reembolso da mensalidade que foi cobrada.`
+      você pode solicitar o cancelamento com direito ao reembolso da mensalidade que foi cobrada.`,
     },
     {
-      title: 'Quanto de limite preciso ter no meu cartão para realizar a assinatura?',
+      title:
+        'Quanto de limite preciso ter no meu cartão para realizar a assinatura?',
       content: `Você precisa ter de limite em seu cartão o valor total da anuidade e no primeiro
       mês o valor total da anuidade será comprometido. Mas fique tranquilo você só será cobrado 
       o valor da parcela. Por isso, não se assuste caso receba um SMS a notificação de sua operadora, 
-      informado uma compra com o valor total, esse é apenas o valor comprometido em sua fatura.`
+      informado uma compra com o valor total, esse é apenas o valor comprometido em sua fatura.`,
     },
     {
       title: 'Como posso pagar minha assinatura?',
       content: `Sua assinatura pode ser paga via cartão de crédito exclusivamente. <br />
-      Não é possível realizar pagamentos via boleto ou com cartão de débito.`
+      Não é possível realizar pagamentos via boleto ou com cartão de débito.`,
     },
     {
       title: 'Posso pagar com um cartão internacional?',
       content: `Sim, a plataforma permite que você realize o pagamento de sua assinatura 
       em até 12x sem juros. Mas fique atento porque, a maioria dos cartões internacionais não 
       permitem parcelamento. Nesse caso, para concretizar sua assinatura, é necessário que a 
-      forma de pagamento selecionada seja à vista (1 parcela).`
+      forma de pagamento selecionada seja à vista (1 parcela).`,
     },
     {
       title: 'Como faço para cancelar minha assinatura?',
       content: `Se não quiser continuar, você pode cancelar a renovação da sua associação por 
       meio da página da sua conta. Siga as instruções para cancelar e sua assinatura não será 
-      renovada. Não há reembolso para períodos de assinatura parcialmente não utilizados.`
+      renovada. Não há reembolso para períodos de assinatura parcialmente não utilizados.`,
     },
   ],
 }

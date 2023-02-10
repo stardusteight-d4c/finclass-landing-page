@@ -3,9 +3,6 @@ import accountPlaceholder from '../assets/account-placeholder.svg'
 import alignLeft from '../assets/roadmap/align-left.svg'
 import alignCenter from '../assets/roadmap/align-center.svg'
 import alignRight from '../assets/roadmap/align-right.svg'
-import chevronDown from '../assets/chevron-down.svg'
-import { roadmapList } from '../data'
-import { MaxWidth768RoadmapListItem } from './integrate/MaxWidth768RoadmapListItem'
 import { useState } from 'react'
 import { Routes } from './MinWidth768Roadmap'
 import { MaxWidth768RoadmapAccordion } from './integrate/MaxWidth768RoadmapAccordion'
@@ -40,31 +37,29 @@ export const MaxWidth768Roadmap = (props: Props) => {
   ]
 
   return (
-    <section className="block md:hidden max-w-[100vw] overflow-hidden bg-black">
-      <div className="pt-16 md:pt-28 pb-11 max-w-screen-xl w-full mx-auto px-4">
-        <div className="flex items-center justify-center flex-col text-center">
+    <section className={style.wrapper}>
+      <div className={style.contentWrapper}>
+        <div className={style.headingFlexContainer}>
           <img
             src={formationIcon}
             alt="formation/svg"
-            className="w-8 h-8 mx-auto md:mx-0"
+            className={style.formationIcon}
           />
-          <h2 className="text-3xl md:text-4xl font-bold !leading-[120%] mt-3">
-            <strong className="textGradient">O que </strong>
+          <h2 className={style.heading}>
+            <strong className={style.strong}>O que </strong>
             você irá <br /> aprender na Finclass
           </h2>
-          <span className="text-[#F5F5F5] mb-8 text-lg mt-2 inline-block">
-            Você evolui junto com a gente
-          </span>
+          <span className={style.span}>Você evolui junto com a gente</span>
         </div>
-        <div className="flex flex-col items-center">
+        <div className={style.flexColContainer}>
           <img
             src={accountPlaceholder}
             alt="account-placeholder/svg"
-            className="w-[50px] h-50px"
+            className={style.accountIcon}
           />
         </div>
-        <div className="w-full h-fit relative">
-          <div className="absolute -top-6 left-1/2 -translate-x-1/2 h-[100%] z-0 !w-0 border-l-[2px] border-l-[#00E7F9]" />
+        <div className={style.accordionsWrapper}>
+          <div className={style.verticalLine} />
           <div>
             {routeAccordionProps.map((button) => (
               <MaxWidth768RoadmapAccordion key={button.title} {...button} />
@@ -74,4 +69,18 @@ export const MaxWidth768Roadmap = (props: Props) => {
       </div>
     </section>
   )
+}
+
+const style = {
+  wrapper: `block md:hidden max-w-[100vw] overflow-hidden bg-black`,
+  contentWrapper: `pt-16 md:pt-28 pb-11 max-w-screen-xl w-full mx-auto px-4`,
+  headingFlexContainer: `flex items-center justify-center flex-col text-center`,
+  formationIcon: `w-8 h-8 mx-auto md:mx-0`,
+  heading: `text-3xl md:text-4xl font-bold !leading-[120%] mt-3`,
+  strong: `textGradient`,
+  span: `text-[#F5F5F5] mb-8 text-lg mt-2 inline-block`,
+  flexColContainer: `flex flex-col items-center`,
+  accountIcon: `w-[50px] h-50px`,
+  accordionsWrapper: `w-full h-fit relative`,
+  verticalLine: `absolute -top-6 left-1/2 -translate-x-1/2 h-[100%] z-0 !w-0 border-l-[2px] border-l-[#00E7F9]`,
 }
