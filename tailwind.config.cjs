@@ -25,11 +25,12 @@ module.exports = {
       gridTemplateColumns: {
         feedbackColumns: '400px 48px auto',
         mediumFeedbackColumns: '1fr 1.5fr',
+        tabFaqColumns: '1fr 1fr 1fr',
       },
       gridTemplateRows: {
         mediumRows: '48px auto',
-        smallRows: 'auto auto auto'
-      }
+        smallRows: 'auto auto auto',
+      },
     },
   },
   plugins: [],

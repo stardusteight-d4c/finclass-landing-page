@@ -14,7 +14,7 @@ export const Contents = (props: Props) => {
 
   return (
     <section className="max-w-[100vw] overflow-hidden bg-black">
-      <div className="md:pt-20 pb-11 max-w-screen-xl w-full mx-auto px-4">
+      <div className="md:pt-44 pb-11 max-w-screen-xl w-full mx-auto px-4">
         <div className="grid md:grid-cols-2">
           <div className="text-center md:text-left col-span-1 md:w-[310px] mmd:w-[410px] xl:w-[510px]">
             <img src={classesIcon} className="w-8 h-8 mx-auto md:mx-0" />

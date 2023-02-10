@@ -10,7 +10,7 @@ interface Props {}
 export const AppMobile = (props: Props) => {
   return (
     <section className="max-w-[100vw] overflow-hidden bg-black">
-      <div className="pt-16 md:pt-28 pb-11 max-w-screen-xl w-full mx-auto px-4">
+      <div className="pt-16 md:pt-44 pb-11 max-w-screen-xl w-full mx-auto px-4">
         <div className="grid md:grid-cols-2">
           <div className="text-center md:text-left col-span-1 md:w-[310px] mmd:w-[410px] xl:w-[510px]">
             <img src={appIcon} className="w-8 h-8 mx-auto md:mx-0" />

@@ -91,7 +91,7 @@ export const MinWidth768Roadmap = (props: Props) => {
 
 const style = {
   wrapper: `hidden md:block max-w-[100vw] overflow-hidden bg-black`,
-  contentWrapper: `pt-16 md:pt-28 pb-11 max-w-screen-xl w-full mx-auto px-4`,
+  contentWrapper: `pt-16 md:pt-44 pb-11 max-w-screen-xl w-full mx-auto px-4`,
   headingContainer: `flex items-center justify-center flex-col text-center`,
   formationIcon: `w-8 h-8 mx-auto md:mx-0`,
   heading: `text-3xl md:text-4xl font-bold !leading-[120%] mt-3`,

@@ -50,7 +50,7 @@ export const Mentors = (props: Props) => {
 
   return (
     <section id='mentors' className="max-w-[100vw] overflow-hidden bg-black">
-      <div className="md:pt-16 max-w-screen-xl w-full mx-auto px-4 md:px-4">
+      <div className="md:pt-44 max-w-screen-xl w-full mx-auto px-4 md:px-4">
         <div className="text-center">
           <img
             src={graduationHat}

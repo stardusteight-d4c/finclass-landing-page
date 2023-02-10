@@ -5,7 +5,7 @@ interface Props {}
 export const Finseries = (props: Props) => {
   return (
     <section className="max-w-[100vw] overflow-hidden bg-black">
-      <div className="pt-16 md:pt-28 pb-11 max-w-screen-xl w-full mx-auto px-4">
+      <div className="pt-16 md:pt-44 pb-11 max-w-screen-xl w-full mx-auto px-4">
         <div className="text-center">
           <span className="textGradient tracking-widest text-sm md:text-lg mx-auto w-fit mb-2 flex flex-col-reverse md:flex-row items-center gap-x-2 uppercase font-semibold">
             Aprenda na prática com os melhores do mercado
