@@ -12,7 +12,7 @@ export const Feedbacks = (props: Props) => {
 
   const incrementSelectedFeedback = () => {
     if (selectedFeeback === 2) {
-      return
+      setSelectedFeedback(0)
     } else {
       setSelectedFeedback(selectedFeeback + 1)
     }
@@ -20,7 +20,7 @@ export const Feedbacks = (props: Props) => {
 
   const decrementSelectedFeedback = () => {
     if (selectedFeeback === 0) {
-      return
+      setSelectedFeedback(2)
     } else {
       setSelectedFeedback(selectedFeeback - 1)
     }
@@ -38,8 +38,8 @@ export const Feedbacks = (props: Props) => {
             </h2>
           </div>
         </div>
-        <div className="grid grid-cols-feedbackColumns items-center gap-x-[100px] mt-14">
-          <div className="col-span-1 flex flex-col gap-y-6">
+        <div className="grid grid-cols-1 grid-rows-smallRows md:grid-cols-mediumFeedbackColumns md:grid-rows-mediumRows lg:grid-rows-none lg:grid-cols-feedbackColumns items-center md:gap-x-4 lg:gap-x-[100px] mt-14">
+          <div className="hidden md:flex flex-col gap-y-6 col-span-1 col-start-1 row-span-1 row-start-2 lg:row-start-auto">
             {feedbacks.map((feedback, index) => (
               <AuthorFeedbackCard
                 key={feedback.user.name}
@@ -50,21 +50,24 @@ export const Feedbacks = (props: Props) => {
               />
             ))}
           </div>
-          <div className="col-span-1 w-fit my-auto">
-            <div className="flex flex-col w-fit h-fit gap-y-4">
+          <div className="col-span-1 row-span-1 row-start-3 md:col-start-2 md:row-span-1 md:row-start-1 lg:row-start-auto w-full lg:w-fit lg:my-auto">
+            <div className="flex mt-4 md:mt-0 flex-row ml-auto lg:flex-col w-fit h-fit gap-x-4 mb-4 lg:mb-0 gap-y-4">
               <img
                 onClick={decrementSelectedFeedback}
                 src={arrowCircleDown}
-                className="w-12 h-12 rotate-180 cursor-pointer"
+                className="w-12 h-12 rotate-90 lg:rotate-180 cursor-pointer"
               />
               <img
                 onClick={incrementSelectedFeedback}
                 src={arrowCircleDown}
-                className="w-12 h-12 cursor-pointer"
+                className="w-12 h-12 -rotate-90 lg:rotate-0 cursor-pointer"
               />
             </div>
           </div>
           <Feedback {...feedbacks[selectedFeeback].feedback} />
+          <div className="block md:hidden row-start-2 row-span-1 col-span-1 w-full">
+            <AuthorFeedbackCard {...feedbacks[selectedFeeback].user} />
+          </div>
         </div>
       </div>
     </section>

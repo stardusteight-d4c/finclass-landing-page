@@ -23,8 +23,13 @@ module.exports = {
         hero: 'url(/bg-worlds-best.webp)',
       },
       gridTemplateColumns: {
-        feedbackColumns: '400px 48px 620px',
+        feedbackColumns: '400px 48px auto',
+        mediumFeedbackColumns: '1fr 1.5fr',
       },
+      gridTemplateRows: {
+        mediumRows: '48px auto',
+        smallRows: 'auto auto auto'
+      }
     },
   },
   plugins: [],
