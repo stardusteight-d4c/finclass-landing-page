@@ -14,8 +14,8 @@ export const Faq = (props: Props) => {
   >('general')
 
   return (
-    <section id="mentors" className="max-w-[100vw] overflow-hidden bg-black">
-      <div className="md:pt-44 max-w-screen-xl w-full mx-auto px-4 md:px-4     pb-12">
+    <section className="max-w-[100vw] overflow-hidden bg-black">
+      <div className="md:pt-44 max-w-screen-xl w-full mx-auto px-4 md:px-4">
         <div className="text-center">
           <img src={faqIcon} alt="faq/svg" className="w-fit mx-auto" />
           <h2 className="text-3xl md:text-4xl font-bold mt-3 !leading-[140%]">

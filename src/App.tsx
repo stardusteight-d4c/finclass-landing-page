@@ -7,6 +7,7 @@ import { MinWidth768Roadmap } from './components/MinWidth768Roadmap'
 import { MaxWidth768Roadmap } from './components/MaxWidth768Roadmap'
 import { Feedbacks } from './components/Feedbacks'
 import { Faq } from './components/Faq'
+import { Subscription } from './components/Subscription'
 
 interface Props {}
 
@@ -22,6 +23,7 @@ export const App = (props: Props) => {
       <MaxWidth768Roadmap />
       <Feedbacks />
       <Faq />
+      <Subscription />
     </main>
   )
 }

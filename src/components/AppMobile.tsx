@@ -17,7 +17,7 @@ export const AppMobile = (props: Props) => {
             <h2 className="text-3xl md:text-4xl font-bold !leading-[120%] mt-3">
             <strong className='textGradient'>Conheça</strong> nosso <br className="md:hidden" /> app
             </h2>
-            <p className="inline-block mb-14 md:mb-0 mt-2 w-[70%] font-light md:text-xl !leading-snug">
+            <p className="inline-block text-white/80 text-sm mb-14 md:mb-0 mt-2 w-[70%] md:text-xl !leading-snug">
               Aprenda com os melhores do mundo, onde e quando você quiser.
             </p>
           </div>
