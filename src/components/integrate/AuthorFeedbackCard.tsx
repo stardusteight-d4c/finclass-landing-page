@@ -19,7 +19,11 @@ export const AuthorFeedbackCard = ({
 }: Props) => {
   return (
     <div
-      onClick={() => setSelectedFeedback && index && setSelectedFeedback(index)}
+      onClick={() => {
+        if (setSelectedFeedback) {
+          setSelectedFeedback(index!)
+        }
+      }}
       className={`${
         selectedFeeback !== index && 'brightness-50'
       } bg-[#0F1116] cursor-pointer rounded-b-lg md:rounded-lg gap-x-4 py-4 lg:py-5 px-4 lg:px-8 flex items-center`}
