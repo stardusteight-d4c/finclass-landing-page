@@ -40,7 +40,7 @@ export const Navbar = (props: Props) => {
         ref={headerRefElement}
         className="z-[500] fixed w-full max-w-screen py-4 md:py-7 mx-auto"
       >
-        <nav className="flex max-w-screen-xl mx-auto px-4 md:px-8 items-center justify-between">
+        <nav className="flex max-w-screen-xl mx-auto px-4 items-center justify-between">
           <img
             src={finclass}
             alt="logo/img"

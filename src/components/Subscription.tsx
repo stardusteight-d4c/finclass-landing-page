@@ -7,7 +7,7 @@ interface Props {}
 export const Subscription = (props: Props) => {
   return (
     <section className="max-w-[100vw] relative overflow-visible bg-black pb-[70px] border-b border-b-[#ffffff2e]">
-      <div className="pt-28 mdd:pt-44 max-w-screen-xl w-full mx-auto px-4 md:px-4">
+      <div className="pt-28 mdd:pt-60 max-w-screen-xl w-full mx-auto px-4 md:px-4">
         <div className="grid grid-cols-1 mdd:grid-cols-2">
           <div className="col-span-1">
             <img src={appBannerMobile} className="block mdd:hidden mx-auto w-full max-w-[500px]" />
@@ -18,7 +18,7 @@ export const Subscription = (props: Props) => {
             />
           </div>
           <div className="col-span-1 mt-10 mdd:mt-0 flex items-center justify-center">
-            <div className="text-center mdd:ml-32 mdd:text-left mdd:w-[310px] mmd:w-[410px] xl:w-[450px]">
+            <div className="text-center mdd:ml-32 mdd:mb-11 mdd:text-left mdd:w-[310px] mmd:w-[410px] xl:w-[450px]">
               <img src={plusPlayerIcon} className="w-8 h-8 mx-auto mdd:mx-0" />
               <h2 className="text-3xl md:text-4xl font-bold !leading-[120%] mt-3">
                 <strong className="textGradient">Aprenda finanças</strong>

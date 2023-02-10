@@ -8,6 +8,7 @@ import { MaxWidth768Roadmap } from './components/MaxWidth768Roadmap'
 import { Feedbacks } from './components/Feedbacks'
 import { Faq } from './components/Faq'
 import { Subscription } from './components/Subscription'
+import { Footer } from './components/Footer'
 
 interface Props {}
 
@@ -24,6 +25,7 @@ export const App = (props: Props) => {
       <Feedbacks />
       <Faq />
       <Subscription />
+      <Footer />
     </main>
   )
 }

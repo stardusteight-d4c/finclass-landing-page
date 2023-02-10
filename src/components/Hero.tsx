@@ -3,6 +3,7 @@ import heroImg from '../assets/hero-img.png'
 import thunderLightning from '../assets/thunder-lightning.svg'
 import arrowCircleDown from '../assets/arrow-circle-down.svg'
 import bgWorldsBest from '../assets/bg-worlds-best.png'
+import { Sticky } from './integrate/Sticky'
 
 interface Props {}
 
@@ -10,7 +11,8 @@ export const Hero = (props: Props) => {
   return (
     <section className="max-w-[100vw] h-fit overflow-hidden bg-black">
       <Navbar />
-      <div className="pt-16 max-w-screen-xl w-full mx-auto px-4 md:px-8">
+      <Sticky />
+      <div className="pt-16 md:pt-28 max-w-screen-xl w-full mx-auto px-4">
         <div className="pt-24 lg:pt-32 pb-28 md:pb-80 lg:pb-52 relative flex flex-col lg:flex-row items-center justify-between">
           <img
             src={bgWorldsBest}

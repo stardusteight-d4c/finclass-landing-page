@@ -27,6 +27,7 @@ module.exports = {
         feedbackColumns: '400px 48px auto',
         mediumFeedbackColumns: '1fr 1.5fr',
         tabFaqColumns: '1fr 1fr 1fr',
+        footerColumns: '1fr 1fr 1fr 1fr 1fr',
       },
       gridTemplateRows: {
         mediumRows: '48px auto',

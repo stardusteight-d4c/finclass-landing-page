@@ -27,16 +27,16 @@ export const AppMobile = (props: Props) => {
                 <AppListItem {...item} />
               ))}
             </ul>
-            <div className='flex flex-col md:flex-row items-center gap-y-8 gap-x-4 mt-10'>
+            <div className='flex mdd:-ml-5 flex-col md:flex-row items-center gap-y-8 gap-x-4 mt-10'>
               <img
                 src={appStoreDownload}
                 alt="download via App Store"
-                className="w-[180px] cursor-pointer"
+                className="w-[190px] hover:brightness-110 cursor-pointer"
               />
               <img
                 src={googlePlayDownload}
                 alt="download via Google Play"
-                className="w-[180px] cursor-pointer"
+                className="w-[190px] hover:brightness-110 cursor-pointer"
               />
             </div>
           </div>
