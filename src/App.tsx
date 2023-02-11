@@ -14,7 +14,7 @@ interface Props {}
 
 export const App = (props: Props) => {
   return (
-    <main id="main" className="">
+    <main id="main">
       <Hero />
       <Mentors />
       <Contents />

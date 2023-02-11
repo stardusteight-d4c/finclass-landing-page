@@ -5,6 +5,7 @@ import cardIcon from '../assets/card.svg'
 import { useState } from 'react'
 import { Accordion } from './integrate/Accordion'
 import { faq } from '../data'
+import { TabItem } from './integrate/TabItem'
 
 interface Props {}
 
@@ -13,58 +14,66 @@ export const Faq = (props: Props) => {
     'general' | 'application' | 'subscriptions'
   >('general')
 
+  const tabItemProps = [
+    {
+      activeTab,
+      setActiveTab,
+      tab: 'general' as 'general',
+      title: 'Geral',
+      icon: generalIcon,
+    },
+    {
+      activeTab,
+      setActiveTab,
+      tab: 'application' as 'application',
+      title: 'Aplicativo',
+      icon: mobileIcon,
+    },
+    {
+      activeTab,
+      setActiveTab,
+      tab: 'subscriptions' as 'subscriptions',
+      extraTitle: 'Planos & ',
+      title: 'Assinaturas',
+      icon: cardIcon,
+    },
+  ]
+
   return (
-    <section className="max-w-[100vw] overflow-hidden bg-black">
-      <div className="pt-14 md:pt-44 max-w-screen-xl w-full mx-auto px-4 md:px-4">
-        <div className="text-center">
-          <img src={faqIcon} alt="faq/svg" className="w-fit mx-auto" />
-          <h2 className="text-3xl md:text-4xl font-bold mt-3 !leading-[140%]">
-            <strong className="textGradient">Perguntas</strong> frequentes
+    <section className={style.wrapper}>
+      <div className={style.contentWrapper}>
+        <div className={style.textCenterContainer}>
+          <img src={faqIcon} alt="faq/svg" className={style.faqIcon} />
+          <h2 className={style.heading}>
+            <strong className={style.strong}>Perguntas</strong> frequentes
           </h2>
-          <div className="grid grid-cols-tabFaqColumns w-full max-w-[741px] mx-auto mt-10">
-            <div
-              onClick={() => setActiveTab('general')}
-              className={`${
-                activeTab === 'general'
-                  ? 'border-b-[#00E7F9]'
-                  : 'border-b-white/25'
-              } col-span-1 cursor-pointer flex flex-col md:flex-row items-center py-6 justify-center border-b gap-x-2`}
-            >
-              <img src={generalIcon} alt="general/svg" className="" />
-              <span>Geral</span>
-            </div>
-            <div
-              onClick={() => setActiveTab('application')}
-              className={`${
-                activeTab === 'application'
-                  ? 'border-b-[#00E7F9]'
-                  : 'border-b-white/25'
-              } col-span-1 cursor-pointer flex flex-col md:flex-row items-center py-6 justify-center border-b gap-x-2`}
-            >
-              <img src={mobileIcon} alt="application/svg" className="" />
-              <span>Aplicativo</span>
-            </div>
-            <div
-              onClick={() => setActiveTab('subscriptions')}
-              className={`${
-                activeTab === 'subscriptions'
-                  ? 'border-b-[#00E7F9]'
-                  : 'border-b-white/25'
-              } col-span-1 cursor-pointer flex flex-col md:flex-row items-center py-6 justify-center border-b gap-x-2`}
-            >
-              <img src={cardIcon} alt="subscriptions/svg" className="" />
-              <span>
-                <span className="hidden lg:inline-block">Planos &</span>{' '}Assinaturas
-              </span>
-            </div>
+          <div className={style.gridContainer}>
+            {tabItemProps.map((prop) => (
+              <TabItem {...prop} />
+            ))}
           </div>
-          <div className="mt-8">
+          <div className={style.accordionsWrapper}>
             {faq[activeTab].map((item) => (
-              <Accordion key={item.title} title={item.title} content={item.content} />
+              <Accordion
+                key={item.title}
+                title={item.title}
+                content={item.content}
+              />
             ))}
           </div>
         </div>
       </div>
     </section>
   )
+}
+
+const style = {
+  wrapper: `max-w-[100vw] overflow-hidden bg-black`,
+  contentWrapper: `pt-14 md:pt-44 max-w-screen-xl w-full mx-auto px-4 md:px-4`,
+  textCenterContainer: `text-center`,
+  faqIcon: `w-fit mx-auto`,
+  heading: `text-3xl md:text-4xl font-bold mt-3 !leading-[140%]`,
+  strong: `textGradient`,
+  gridContainer: `grid grid-cols-tabFaqColumns w-full max-w-[741px] mx-auto mt-10`,
+  accordionsWrapper: `mt-8`,
 }
