@@ -22,5 +22,4 @@ This landing page is an example of how the use of modern technologies can help c
 
 ![screen](/screens/screen-desktop.png)
 
-
 <p align="center">Project made with :blue_heart: by <a href="https://github.com/stardusteight-d4c">Gabriel Sena</a></p>
